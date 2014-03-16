@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSWebRpt.Web", "POSWebRpt.Web\POSWebRpt.Web.csproj", "{DDB69502-0DBD-4669-84B6-817FD36FB5C0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55AB0BF7-14BE-45A1-A584-D2C422550507} = {55AB0BF7-14BE-45A1-A584-D2C422550507}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSWebRpt.BLL", "POSWebRpt.BLL\POSWebRpt.BLL.csproj", "{0102F6CB-A9A0-41C1-8575-AE5358737993}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55AB0BF7-14BE-45A1-A584-D2C422550507} = {55AB0BF7-14BE-45A1-A584-D2C422550507}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSWebRpt.DAL", "POSWebRpt.DAL\POSWebRpt.DAL.csproj", "{7F806279-3273-43ED-8ED7-A98325FAB14F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55AB0BF7-14BE-45A1-A584-D2C422550507} = {55AB0BF7-14BE-45A1-A584-D2C422550507}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSWebRpt.Utilities", "POSWebRpt.Utilities\POSWebRpt.Utilities.csproj", "{28E5E572-5113-47B8-AC41-D9107BC71767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSWebRpt.Entity", "POSWebRpt.Entity\POSWebRpt.Entity.csproj", "{75042410-C20D-40D6-BA4E-1725261D8A99}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55AB0BF7-14BE-45A1-A584-D2C422550507} = {55AB0BF7-14BE-45A1-A584-D2C422550507}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSWebRpt.Common", "POSWebRpt.Common\POSWebRpt.Common.csproj", "{55AB0BF7-14BE-45A1-A584-D2C422550507}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDB69502-0DBD-4669-84B6-817FD36FB5C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB69502-0DBD-4669-84B6-817FD36FB5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB69502-0DBD-4669-84B6-817FD36FB5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB69502-0DBD-4669-84B6-817FD36FB5C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0102F6CB-A9A0-41C1-8575-AE5358737993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0102F6CB-A9A0-41C1-8575-AE5358737993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0102F6CB-A9A0-41C1-8575-AE5358737993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0102F6CB-A9A0-41C1-8575-AE5358737993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F806279-3273-43ED-8ED7-A98325FAB14F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F806279-3273-43ED-8ED7-A98325FAB14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F806279-3273-43ED-8ED7-A98325FAB14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F806279-3273-43ED-8ED7-A98325FAB14F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E5E572-5113-47B8-AC41-D9107BC71767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E5E572-5113-47B8-AC41-D9107BC71767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E5E572-5113-47B8-AC41-D9107BC71767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E5E572-5113-47B8-AC41-D9107BC71767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75042410-C20D-40D6-BA4E-1725261D8A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75042410-C20D-40D6-BA4E-1725261D8A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75042410-C20D-40D6-BA4E-1725261D8A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75042410-C20D-40D6-BA4E-1725261D8A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55AB0BF7-14BE-45A1-A584-D2C422550507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55AB0BF7-14BE-45A1-A584-D2C422550507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55AB0BF7-14BE-45A1-A584-D2C422550507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55AB0BF7-14BE-45A1-A584-D2C422550507}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
