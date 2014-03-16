@@ -1,0 +1,166 @@
+﻿/*********** Template For General Controls ***********/
+html{margin-top:0px;}
+body {font-family:Calibri;font-size:11pt;font-weight:normal;margin:0px;padding:2px;background-color:#ffffff;}
+a:link{color:#000000;text-decoration: none;font-family:Calibri;font-size:11pt;}
+a:visited{color: #505abc;font-family:Calibri;font-size:11pt;}
+a:hover{color: #0000ff;font-family:Calibri;font-size:11pt;text-decoration: underline;}
+a:active{color: #ff0000;font-family:Calibri;font-size:11pt;}
+input[type="text"],input[type="password"]{color: #000000;font-family:Calibri;font-size:11pt;font-weight:normal;padding:3px;}
+textarea {color: #000000;font-family:Calibri;font-size:11pt;font-weight:normal;
+    margin-left: 1px;
+}
+
+input[type="submit"]{cursor:pointer;font-family:Calibri;font-size:11pt;}
+select{background-color: #fafafa;border:1px solid #7f9db9;font-family:Calibri;font-size:11pt;}
+
+fieldset 
+{	
+	margin:5px;
+	padding:5px 10px 5px 10px;
+	text-align:left;
+	vertical-align: top;
+}
+fieldset p {color:#000000;margin: 0px 12px 0px 0px;}
+fieldset legend {color:#003c78;font-family:Calibri;font-size: 12pt;font-weight:bold;padding: 2px 4px 8px 4px;}
+/*********** End template ***********/ 
+
+/*********** Template for master page ***********/
+
+/* Header section */
+#header{margin:0px;width:100%;height:54px;}
+#header .username{text-align:right;float:right;padding-right:5px;margin-top:5px;vertical-align:top;color:#000000;}
+#header .username a{color:#000000;}
+#header .logo{float:left;width:49%;margin-top:5px;padding:0px 0px 0px 5px;vertical-align:top;}
+
+
+.profile{font-size:9pt;text-align:right;}
+
+/* Sub Header */
+#subheader{background-color:#FFE3AA;border-collapse:collapse;height:34px;margin:0px;padding:5px 0px 0px 0px;width:100%;}
+#subheader .headertext{border:none 1px #fff;float:left;margin:0px;padding:0px;width:100%;}
+
+#main {width:100%;min-height:380px;margin:0px;color:#000000;padding:0px;}
+#main .main_container{padding:0px 0px 10px 0px;border-left: none 0px #cccccc;border-right:none 0px #cccccc;border-bottom:none 0px #cccccc;}
+
+/* Footer section */
+#footer{width:100%;height:25px;clear:both;color:#ffffff;font-size:9pt;padding:5px 0px 7px 0px;background-color:#808080;}
+#footer .copyright{float:left;padding:5px 0px 0px 10px;}
+#footer .disclaimer{float:right;padding:5px 10px 0px 0px;}
+#footer .disclaimer a{color:#ffffff;}
+   
+/* Page Header */
+#pageheader{background-color:#FFF2D7;font-size:12pt;font-weight:bold;height:25px;padding:10px 0px 2px 0px;text-align:center;vertical-align:middle;color:#000000;}
+
+/*********** End template ***********/
+.listpanelheader{padding:2px 0px 5px 0px;}
+.listpanelheader table td{color:#000000;vertical-align:middle;}
+.listpanelheader table td a{color:#000000;text-decoration:none;}
+.listpanelheader table td input[type="image"]{vertical-align:middle;}
+.listpanelheader table td a:hover{color:#000000;text-decoration:underline;}
+
+.listpanel{padding:5px 0px 5px 0px;}
+.searchpanel{padding:0px 0px 10px 0px;}
+             
+#dvaddnew{text-align:right;padding-right:5px;margin-top:0px;}
+#dvaddnew a{text-decoration:underline;}
+#dvaddnew input[type="image"]{vertical-align:middle;height:16px;}
+
+#dvheader {font-family:Calibri, Arial, Helvetica, sans-serif;font-size:11pt;padding-top:10px;}
+#dvbody {font-family:Calibri, Arial, Helvetica, sans-serif;font-size:12pt;padding-top:10px;}
+#dvfooter {font-family:Calibri, Arial, Helvetica, sans-serif;font-size:12pt;padding-top:10px;}
+#dvfooter a{color:#000000;}
+
+#maincontent{border:solid 1px #d0d0bf;width:100%;}
+#maincontent .maincontent_left{border-right:dotted 1px #d0d0bf;vertical-align: top;width: 200px;}
+#maincontent .maincontent_right{vertical-align:top}
+
+
+.buttonpanel{width:100%;padding: 20px 0px 10px 0px;}
+.reportpanel{background-image:none;padding-top:10px;}
+.rptviewer{background-color:White;}
+.navigationpanel{color:#f88017;font-size:9pt;font-weight:bold;margin:2px 0px 0px 5px;}
+.navigationpanel a{color:#f88017;font-size:9pt;font-weight:bold;text-decoration:none;}
+.navigationpanel a:hover{text-decoration:underline;}
+.calender{cursor:pointer;}
+
+/* For Basic Controls */
+.label{color:#000000;font-size:11pt;}
+.labelstrong{color:#000000;font-size:11pt;font-weight:bold;}
+.numerictextbox {text-align:right;}
+.textbox{text-align:left;}
+.disabledtextbox{background-color:#C1C1C1;}
+
+
+/* For gridview */
+.gridviewheader {background-color:#FFCC66;border:1px solid #dbe0ed;color:#000000;font-weight:normal;padding:3px;vertical-align:top;}
+.gridviewheader a{color:#000000;}
+.gridviewheader a:hover{color:#000000;}
+.gridviewitem {background-color:#FFF2D7;border:1px solid #dbe0ed; padding:2px 3px 2px 3px;}
+.gridviewitem a{color:Black;text-decoration:none;}
+.gridviewitem a:hover{color:Blue;text-decoration:underline;}
+.gridviewalternateitem {border:1px solid #dbe0ed; padding:2px 3px 2px 3px; background-color:#FFF9EC;}
+.gridviewalternateitem a{color:Black;text-decoration:none;}
+.gridviewalternateitem a:hover{color:Blue;text-decoration:underline;}
+.gridviewemptydatarow {color:#f88017; font-weight:bold;}
+.gridviewemptydatarow td {border:none 0px #000000;padding:5px 0px 5px 0px;}
+.gridviewpager{border:1px solid #dbe0ed;}
+.gridviewpager td{background-color:#FF8822;border-style:none;color:#36478B;font-size: 12px;font-weight:bold;padding:1px 5px 1px 2px;}
+.gridviewpager td table {border-style:none; text-align: left;}
+.gridviewpager td table td {border:none 1px #000;cursor:pointer;}
+.gridviewpager a{color: #0025b2;padding-left:0px;}
+.gridviewpager a:hover{color:#000000;}
+.gridviewpager span {border:none 1px #ff0000;color:#000000;cursor:text;}
+
+/* For Repeater */
+.repeaterheader{color:#000000; font-weight:bold;}
+.repeaterheader th{background-color:#FFCC66;border:1px solid #dbe0ed; padding:3px 0px 3px 3px; text-align:left;vertical-align:top;}
+.repeateritem{font-weight:normal;}
+.repeateritem td{background-color:#FFF2D7;border:1px solid #dbe0ed; padding:2px 3px 2px 3px;}
+.repeateritem td a{text-decoration:none;}
+.repeateritem td a:hover{text-decoration:underline;}
+.repeateritemhover{font-weight:normal;}
+.repeateritemhover td{border:1px solid #A1CDF2; padding:3px; background-color:#EEFF00;}
+
+.repeateralternateitem{font-weight:normal;}
+.repeateralternateitem td{background-color:#FFF9EC;border:1px solid #dbe0ed; padding:2px 3px 2px 3px; }
+.repeateralternateitem td a{text-decoration:none;}
+.repeateralternateitem td a:hover{text-decoration:underline;}
+.repeateralternateitemhover{font-weight:normal;}
+.repeateralternateitemhover td{border:1px solid #A1CDF2; padding:3px 5px 3px 5px; background-color:#EEFF00;}
+
+.repeaterfooter{color:#36478B; font-weight:normal;}
+.repeaterfooter td{background-color:#FFCC66;border:1px solid #dbe0ed; padding:2px 3px 2px 3px;  text-align:left;vertical-align:top;}
+.repeaterfooterhover{color:#36478B; font-weight:bold;}
+.repeaterfooterhover td{background-color:#EEFF00;border:1px solid #dbe0ed; padding:3px 5px 3px 5px; }
+
+/* For Tables */
+.table{border-collapse:collapse;}
+.table th{border:solid 1px #A1CDF2;font-weight:bold;color:#36478B;text-align:center;padding:5px;}
+.table td{border:solid 1px #A1CDF2;font-weight:normal;text-align:center;padding:5px;}
+
+/* Auto Complete Extender*/
+.autocomplete_completionList{visibility: hidden;margin: 0px !important;background-color: #ffffff;color: windowtext;border: buttonshadow;border-width: 1px;border-style: solid;cursor: 'default';overflow: auto;width: 150px;text-align: left;list-style-type: none;font-size:10pt;max-height:100px;}
+.autocomplete_highlightedItem{background-color: #eeeeee;color: black;padding: 1px;}
+.autocomplete_listItem{background-color: #ffffff;color: windowtext;padding: 1px;}    
+
+/* error message*/	
+.errormessage{color:#f88017;font-size:9pt;font-weight:bold;}
+.errormessage1{font-size:10pt;font-weight:bold;color:#f88017;}
+.mandatorysymbol{color:#f88017;font-size:9pt;padding-left:2px;}
+
+/* For Ajax */
+.background{filter: alpha(opacity=40);}
+.progress{position: absolute;z-index: 999;top: 30%;left: 48%;height: 80px;width: 110px;background-color: #FF8822;border: inset 1px #2a3c52;}
+.progress #image{position: absolute;left: 35px;top: 10px;}
+.progress #text{position: absolute;left: 10px;top: 50px;color: White;font:Calibri;font-weight: bold;font-size: 11pt;}
+
+.asynpanel{border: solid 1px #328dc4;padding: 7px 5px 0px 5px; height: 25px;}
+.asynpanel #dvAsyncClose{text-align: right; float: right; width: 50px;}
+.asynpanel #dvAsyncMessage{color:Red;font-size:8pt;float: left; vertical-align: top;}
+
+.synpanel{border: solid 1px #328dc4;padding: 5px 0px 5px 0px;}
+.synpanel td img{cursor: pointer;}
+.synpanel td{color:Red;font-size:8pt;vertical-align:middle;}
+/* For print */
+.printpanel{background-color:#FFCC66;position: absolute;padding: 5px;border:solid 1px #0000ff;color: #ffffff;z-index:999;background: -webkit-gradient(linear, left top, left bottom, from(#FFCC66), to(#FFCC67)); /* for Safari, Google Chrome */ background: -moz-linear-gradient(top,  #FFCC66,  #FFCC67); /* for Firefox */ filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FFCC66,endColorStr=#FFCC67);/* for IE */}
+@media print {.noprint {display:none;}
