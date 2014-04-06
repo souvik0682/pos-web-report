@@ -120,9 +120,10 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[rpt].[]";
+                helper.CommandText = "[dbo].[sp_rpt_ITEMWISESALE]";
                 helper.CommandType = CommandType.StoredProcedure;
-                helper.Parameters.Add("@", 1);
+                helper.Parameters.Add("@StartDate", criteria.FromDate);
+                helper.Parameters.Add("@EndDate", criteria.ToDate);
                 helper.Open();
                 helper.ExecuteReader(CommandBehavior.CloseConnection);
 
@@ -138,29 +139,29 @@ namespace POSWebRpt.DAL
             return lstData;
         }
 
-        public static List<ReportEntity> GetItemWiseSaleWithCombo(ReportCriteria criteria)
-        {
-            List<ReportEntity> lstData = new List<ReportEntity>();
+        //public static List<ReportEntity> GetItemWiseSaleWithCombo(ReportCriteria criteria)
+        //{
+        //    List<ReportEntity> lstData = new List<ReportEntity>();
 
-            using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
-            {
-                helper.CommandText = "[rpt].[]";
-                helper.CommandType = CommandType.StoredProcedure;
-                helper.Parameters.Add("@", 1);
-                helper.Open();
-                helper.ExecuteReader(CommandBehavior.CloseConnection);
+        //    using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
+        //    {
+        //        helper.CommandText = "[rpt].[]";
+        //        helper.CommandType = CommandType.StoredProcedure;
+        //        helper.Parameters.Add("@", 1);
+        //        helper.Open();
+        //        helper.ExecuteReader(CommandBehavior.CloseConnection);
 
-                while (helper.DataReader.Read())
-                {
-                    ReportEntity report = new ReportEntity(helper.DataReader);
-                    lstData.Add(report);
-                }
+        //        while (helper.DataReader.Read())
+        //        {
+        //            ReportEntity report = new ReportEntity(helper.DataReader);
+        //            lstData.Add(report);
+        //        }
 
-                helper.Close();
-            }
+        //        helper.Close();
+        //    }
 
-            return lstData;
-        }
+        //    return lstData;
+        //}
 
         public static List<ReportEntity> GetSaleRegister(ReportCriteria criteria)
         {

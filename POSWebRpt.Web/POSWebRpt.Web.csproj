@@ -137,9 +137,7 @@
     <Content Include="Views\Reports\BillWiseSaleRefund.aspx" />
     <Content Include="Views\Reports\CashierLog.aspx" />
     <Content Include="Views\Reports\CashierWiseSale.aspx" />
-    <Content Include="Views\Reports\CashierWiseSaleSummary.aspx" />
     <Content Include="Views\Reports\ItemWiseSale.aspx" />
-    <Content Include="Views\Reports\ItemWiseSaleWithCombo.aspx" />
     <Content Include="Views\Reports\SaleRegister.aspx" />
     <Content Include="Views\Reports\StockLedger.aspx" />
     <Content Include="Views\Reports\VatItemWise.aspx" />
@@ -220,26 +218,12 @@
     <Compile Include="Views\Reports\CashierWiseSale.aspx.designer.cs">
       <DependentUpon>CashierWiseSale.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Reports\CashierWiseSaleSummary.aspx.cs">
-      <DependentUpon>CashierWiseSaleSummary.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Reports\CashierWiseSaleSummary.aspx.designer.cs">
-      <DependentUpon>CashierWiseSaleSummary.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\Reports\ItemWiseSale.aspx.cs">
       <DependentUpon>ItemWiseSale.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Reports\ItemWiseSale.aspx.designer.cs">
       <DependentUpon>ItemWiseSale.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Reports\ItemWiseSaleWithCombo.aspx.cs">
-      <DependentUpon>ItemWiseSaleWithCombo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Reports\ItemWiseSaleWithCombo.aspx.designer.cs">
-      <DependentUpon>ItemWiseSaleWithCombo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\SaleRegister.aspx.cs">
       <DependentUpon>SaleRegister.aspx</DependentUpon>
