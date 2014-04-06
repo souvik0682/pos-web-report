@@ -32,7 +32,7 @@ namespace POSWebRpt.DAL
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
                 helper.Open();
-                helper.CommandText = "[adm].[uspSaveError]";
+                helper.CommandText = "[webadmin].[uspSaveError]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", userId);
                 helper.Parameters.Add("@ErrorMessage", message);

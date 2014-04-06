@@ -271,7 +271,7 @@ namespace POSWebRpt.Web.Views
         private void RedirecToAddEditPage(int id)
         {
             string encryptedId = GeneralFunctions.EncryptQueryString(id.ToString());
-            Response.Redirect("~/Views/RoleEdit.aspx?id=" + encryptedId);
+            Response.Redirect("~/Views/Security/RoleEdit.aspx?id=" + encryptedId);
         }
 
         private void BuildSearchCriteria(SearchCriteria criteria)

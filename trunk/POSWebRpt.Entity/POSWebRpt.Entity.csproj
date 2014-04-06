@@ -49,10 +49,12 @@
   <ItemGroup>
     <Compile Include="ActionResult.cs" />
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="ReportCriteria.cs" />
     <Compile Include="Interface\IUser.cs" />
     <Compile Include="Interface\IEntityBase.cs" />
     <Compile Include="MenuEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportEntity.cs" />
     <Compile Include="RoleEntity.cs" />
     <Compile Include="RoleMenuEntity.cs" />
     <Compile Include="SearchCriteria.cs" />

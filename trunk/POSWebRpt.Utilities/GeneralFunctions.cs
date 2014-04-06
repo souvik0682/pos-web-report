@@ -396,6 +396,11 @@ namespace POSWebRpt.Utilities
             page.ClientScript.RegisterStartupScript(typeof(Page), "CloseRefresh", "<script>javascript:window.close();window.opener.location.reload();</script>");
         }
 
+        public static void RegisterErrorAlertScript(Page page, string message)
+        {
+            RegisterAlertScript(page, "An Error has occured: \\r\\n Error Message: " + message);
+        }
+
         /// <summary>
         /// Closes the popup.
         /// </summary>

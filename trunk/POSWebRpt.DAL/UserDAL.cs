@@ -21,7 +21,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspChangePassword]";
+                helper.CommandText = "[webadmin].[uspChangePassword]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", user.Id);
                 helper.Parameters.Add("@OldPwd", user.Password);
@@ -38,7 +38,7 @@ namespace POSWebRpt.DAL
         {
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspValidateUser]";
+                helper.CommandText = "[webadmin].[uspValidateUser]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserName", user.Name);
                 helper.Parameters.Add("@Password", user.Password);
@@ -65,7 +65,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetUser]";
+                helper.CommandText = "[webadmin].[uspGetUser]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@IsActiveOnly", isActiveOnly);
                 helper.Parameters.Add("@SchUserName", searchCriteria.UserName);
@@ -93,7 +93,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetUser]";
+                helper.CommandText = "[webadmin].[uspGetUser]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", userId);
                 helper.Parameters.Add("@IsActiveOnly", isActiveOnly);
@@ -119,7 +119,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspSaveUser]";
+                helper.CommandText = "[webadmin].[uspSaveUser]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", user.Id);
                 helper.Parameters.Add("@UserName", user.Name);
@@ -144,7 +144,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspDeleteUser]";
+                helper.CommandText = "[webadmin].[uspDeleteUser]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", userId);
                 helper.Parameters.Add("@ModifiedBy", modifiedBy);
@@ -162,7 +162,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspResetPassword]";
+                helper.CommandText = "[webadmin].[uspResetPassword]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", user.Id);
                 helper.Parameters.Add("@Pwd", user.Password);
@@ -181,7 +181,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetAdminUsers]";
+                helper.CommandText = "[webadmin].[uspGetAdminUsers]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@LoggedUserId", LoggedUserId);
                 helper.Open();
@@ -198,7 +198,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetUserById]";
+                helper.CommandText = "[webadmin].[uspGetUserById]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", userId);
                 helper.Open();
@@ -219,7 +219,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetRole]";
+                helper.CommandText = "[webadmin].[uspGetRole]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@IsActiveOnly", isActiveOnly);
                 helper.Parameters.Add("@SchRole", searchCriteria.RoleName);
@@ -246,7 +246,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetRole]";
+                helper.CommandText = "[webadmin].[uspGetRole]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@RoleId", roleId);
                 helper.Parameters.Add("@IsActiveOnly", isActiveOnly);
@@ -272,7 +272,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspSaveRole]";
+                helper.CommandText = "[webadmin].[uspSaveRole]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@RoleID", role.Id);
                 helper.Parameters.Add("@RoleName", role.Name);
@@ -292,7 +292,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspDeleteRole]";
+                helper.CommandText = "[webadmin].[uspDeleteRole]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@RoleId", roleId);
                 helper.Parameters.Add("@ModifiedBy", modifiedBy);
@@ -309,7 +309,7 @@ namespace POSWebRpt.DAL
             int result = 0;
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspChangeRoleStatus]";
+                helper.CommandText = "[webadmin].[uspChangeRoleStatus]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@RoleId", roleId);
                 helper.Parameters.Add("@RoleStatus", status);
@@ -327,7 +327,7 @@ namespace POSWebRpt.DAL
             List<IRoleMenu> lstMenu = new List<IRoleMenu>();
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetMenuByRole]";
+                helper.CommandText = "[webadmin].[uspGetMenuByRole]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@RoleId", roleId);
                 helper.Parameters.Add("@MainId", mainId);
@@ -352,7 +352,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetMenuAccessByUser]";
+                helper.CommandText = "[webadmin].[uspGetMenuAccessByUser]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", userId);
                 helper.Parameters.Add("@MenuId", menuId);
@@ -376,7 +376,7 @@ namespace POSWebRpt.DAL
             DataSet ds = new DataSet();
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[adm].[uspGetUserSpecificMenuList]";
+                helper.CommandText = "[webadmin].[uspGetUserSpecificMenuList]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@UserId", UserID);
                 helper.Open();

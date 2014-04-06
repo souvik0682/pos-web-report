@@ -265,7 +265,6 @@ namespace POSWebRpt.Web.Views
         private void SaveUser()
         {
             IUser user = new UserEntity();
-            string message = string.Empty;
             BuildUserEntity(user);
 
             if (ValidateControls(user))
@@ -282,7 +281,7 @@ namespace POSWebRpt.Web.Views
 
                     else
                     {
-                        GeneralFunctions.RegisterAlertScript(this, message);
+                        GeneralFunctions.RegisterAlertScript(this, result.Message);
                     }
                 }
             }

@@ -46,7 +46,7 @@ namespace POSWebRpt.Utilities.ReportManager
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="REC.Utilities.ReportManager.LocalReportManager"/> class.
+        /// Initializes a new instance of the <see cref="POS.Utilities.ReportManager.LocalReportManager"/> class.
         /// </summary>
         /// <createdby>Amit Kumar Chandra</createdby>
         /// <createddate>11/06/2012</createddate>
@@ -57,7 +57,7 @@ namespace POSWebRpt.Utilities.ReportManager
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="REC.Utilities.ReportManager.LocalReportManager"/> class.
+        /// Initializes a new instance of the <see cref="POS.Utilities.ReportManager.LocalReportManager"/> class.
         /// </summary>
         /// <param name="reportName">The Name of the report.</param>
         /// <param name="reportNamespace">The report namespace.</param>
@@ -74,7 +74,7 @@ namespace POSWebRpt.Utilities.ReportManager
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="REC.Utilities.ReportManager.LocalReportManager"/> class.
+        /// Initializes a new instance of the <see cref="POS.Utilities.ReportManager.LocalReportManager"/> class.
         /// </summary>
         /// <param name="rptViewer">The <see cref="Microsoft.Reporting.WebForms.ReportViewer"/> object.</param>
         /// <param name="reportName">Name of the report.</param>
@@ -244,7 +244,7 @@ namespace POSWebRpt.Utilities.ReportManager
             string[] streams;
             string reportFormat;
             string contentType;
-            
+
             Warning[] warnings;
 
             switch (ReportFormat)
@@ -258,11 +258,6 @@ namespace POSWebRpt.Utilities.ReportManager
                     reportFormat = "EXCEL";
                     contentType = "application/vnd.ms-excel";
                     fileName = ReportName + ".xls";
-                    break;
-                case ReportFormat.Word:
-                    reportFormat = "WORD";
-                    contentType = "application/ms-word";
-                    fileName = ReportName + ".doc";
                     break;
                 case ReportFormat.XML:
                     reportFormat = "XML";
@@ -339,15 +334,10 @@ namespace POSWebRpt.Utilities.ReportManager
                 this.RptViewer.LocalReport.SetParameters(new ReportParameter[] { _lstReportParameter[index] });
             }
 
-            // If the report contains any subreport, then add corresponding datasources.
-            if (this.HasSubReport)
-            {
-                this.RptViewer.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
-            }
-
             this.RptViewer.LocalReport.Refresh();
         }
 
         #endregion
+
     }
 }
