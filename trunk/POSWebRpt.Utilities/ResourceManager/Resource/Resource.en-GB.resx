@@ -300,4 +300,10 @@
   <data name="R00061" xml:space="preserve">
     <value>Click to quit</value>
   </data>
+  <data name="R00062" xml:space="preserve">
+    <value>Please select from date</value>
+  </data>
+  <data name="R00063" xml:space="preserve">
+    <value>Please select to date</value>
+  </data>
 </root>
