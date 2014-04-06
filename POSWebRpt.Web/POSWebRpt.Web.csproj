@@ -134,12 +134,22 @@
     <Content Include="Scripts\CustomTextBox.js" />
     <Content Include="Unauthorized.aspx" />
     <Content Include="UnderConstruction.aspx" />
-    <Content Include="Views\RoleEdit.aspx" />
-    <Content Include="Views\UserEdit.aspx" />
-    <Content Include="Views\ChangePassword.aspx" />
+    <Content Include="Views\Reports\BillWiseSaleRefund.aspx" />
+    <Content Include="Views\Reports\CashierLog.aspx" />
+    <Content Include="Views\Reports\CashierWiseSale.aspx" />
+    <Content Include="Views\Reports\CashierWiseSaleSummary.aspx" />
+    <Content Include="Views\Reports\ItemWiseSale.aspx" />
+    <Content Include="Views\Reports\ItemWiseSaleWithCombo.aspx" />
+    <Content Include="Views\Reports\SaleRegister.aspx" />
+    <Content Include="Views\Reports\StockLedger.aspx" />
+    <Content Include="Views\Reports\VatItemWise.aspx" />
+    <Content Include="Views\Reports\VatRestaurnatWise.aspx" />
+    <Content Include="Views\Security\ChangePassword.aspx" />
+    <Content Include="Views\Security\RoleEdit.aspx" />
+    <Content Include="Views\Security\RoleList.aspx" />
+    <Content Include="Views\Security\UserEdit.aspx" />
+    <Content Include="Views\Security\UserList.aspx" />
     <Content Include="Views\Home.aspx" />
-    <Content Include="Views\RoleList.aspx" />
-    <Content Include="Views\UserList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -189,26 +199,110 @@
     <Compile Include="UnderConstruction.aspx.designer.cs">
       <DependentUpon>UnderConstruction.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\RoleEdit.aspx.cs">
-      <DependentUpon>RoleEdit.aspx</DependentUpon>
+    <Compile Include="Views\Reports\BillWiseSaleRefund.aspx.cs">
+      <DependentUpon>BillWiseSaleRefund.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\RoleEdit.aspx.designer.cs">
-      <DependentUpon>RoleEdit.aspx</DependentUpon>
+    <Compile Include="Views\Reports\BillWiseSaleRefund.aspx.designer.cs">
+      <DependentUpon>BillWiseSaleRefund.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserEdit.aspx.cs">
-      <DependentUpon>UserEdit.aspx</DependentUpon>
+    <Compile Include="Views\Reports\CashierLog.aspx.cs">
+      <DependentUpon>CashierLog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\UserEdit.aspx.designer.cs">
-      <DependentUpon>UserEdit.aspx</DependentUpon>
+    <Compile Include="Views\Reports\CashierLog.aspx.designer.cs">
+      <DependentUpon>CashierLog.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\ChangePassword.aspx.cs">
+    <Compile Include="Views\Reports\CashierWiseSale.aspx.cs">
+      <DependentUpon>CashierWiseSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\CashierWiseSale.aspx.designer.cs">
+      <DependentUpon>CashierWiseSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\CashierWiseSaleSummary.aspx.cs">
+      <DependentUpon>CashierWiseSaleSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\CashierWiseSaleSummary.aspx.designer.cs">
+      <DependentUpon>CashierWiseSaleSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ItemWiseSale.aspx.cs">
+      <DependentUpon>ItemWiseSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\ItemWiseSale.aspx.designer.cs">
+      <DependentUpon>ItemWiseSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ItemWiseSaleWithCombo.aspx.cs">
+      <DependentUpon>ItemWiseSaleWithCombo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\ItemWiseSaleWithCombo.aspx.designer.cs">
+      <DependentUpon>ItemWiseSaleWithCombo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\SaleRegister.aspx.cs">
+      <DependentUpon>SaleRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\SaleRegister.aspx.designer.cs">
+      <DependentUpon>SaleRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\StockLedger.aspx.cs">
+      <DependentUpon>StockLedger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\StockLedger.aspx.designer.cs">
+      <DependentUpon>StockLedger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\VatItemWise.aspx.cs">
+      <DependentUpon>VatItemWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\VatItemWise.aspx.designer.cs">
+      <DependentUpon>VatItemWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\VatRestaurnatWise.aspx.cs">
+      <DependentUpon>VatRestaurnatWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\VatRestaurnatWise.aspx.designer.cs">
+      <DependentUpon>VatRestaurnatWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Security\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\ChangePassword.aspx.designer.cs">
+    <Compile Include="Views\Security\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Security\RoleEdit.aspx.cs">
+      <DependentUpon>RoleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Security\RoleEdit.aspx.designer.cs">
+      <DependentUpon>RoleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Security\RoleList.aspx.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Security\RoleList.aspx.designer.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Security\UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Security\UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Security\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Security\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -217,24 +311,9 @@
     <Compile Include="Views\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\RoleList.aspx.cs">
-      <DependentUpon>RoleList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\RoleList.aspx.designer.cs">
-      <DependentUpon>RoleList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserList.aspx.cs">
-      <DependentUpon>UserList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\UserList.aspx.designer.cs">
-      <DependentUpon>UserList.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="RDLC\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\POSWebRpt.BLL\POSWebRpt.BLL.csproj">
@@ -262,6 +341,18 @@
     <None Include="Scripts\jquery-ui-1.8.14.custom.min.js.Prev" />
     <None Include="Styles\bootstrap\bootstrap-theme.css.map" />
     <None Include="Styles\bootstrap\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RDLC\BillWiseSaleRefund.rdlc" />
+    <EmbeddedResource Include="RDLC\CashierLog.rdlc" />
+    <EmbeddedResource Include="RDLC\CashierWiseSale.rdlc" />
+    <EmbeddedResource Include="RDLC\CashierWiseSaleSummary.rdlc" />
+    <EmbeddedResource Include="RDLC\ItemWiseSale.rdlc" />
+    <EmbeddedResource Include="RDLC\ItemWiseSaleWithCombo.rdlc" />
+    <EmbeddedResource Include="RDLC\SaleRegister.rdlc" />
+    <EmbeddedResource Include="RDLC\StockLedger.rdlc" />
+    <EmbeddedResource Include="RDLC\VatItemWise.rdlc" />
+    <EmbeddedResource Include="RDLC\VatRestaurnatWise.rdlc" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

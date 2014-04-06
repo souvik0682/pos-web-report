@@ -34,7 +34,7 @@ namespace POSWebRpt.BLL
                 }
                 else
                 {
-                    message = ErrorResourceManager.GetStringWithoutName("ERR00043");
+                    message = ResourceManager.GetStringWithoutName("R00059");
                 }
             }
             else

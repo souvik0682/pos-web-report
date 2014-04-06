@@ -156,6 +156,9 @@ function endRequest(sender, args) {
         args.set_errorHandled(true);
         ToggleAsynDiv('');
 
+        if ($get('container_dvSync') != null)
+            $get('container_dvSync').style.display = 'none';
+
         if ($get('ctl00_container_UpdateProgress1') != null)
             $get('ctl00_container_UpdateProgress1').style.display = 'none';
 
@@ -214,4 +217,9 @@ function IsDecimal(ctrl) {
     else {
         return true;
     }
+}
+/***** For Ajax *****/
+function closeErrorPanel() {
+    if ($get('container_dvSync') != null)
+        $get('container_dvSync').style.display = 'none';
 }

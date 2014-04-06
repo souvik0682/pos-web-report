@@ -5,7 +5,6 @@ using System.Text;
 using POSWebRpt.Common;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data.SqlClient;
 
 namespace POSWebRpt.Entity
 {

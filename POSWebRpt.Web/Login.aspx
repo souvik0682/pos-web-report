@@ -1,4 +1,4 @@
-﻿<%@ Page Title=":: POS Login ::" Language="C#" MasterPageFile="~/Blank.Master" AutoEventWireup="true"
+﻿<%@ Page Title=":: POS :: Login" Language="C#" MasterPageFile="~/Blank.Master" AutoEventWireup="true"
     CodeBehind="Login.aspx.cs" Inherits="POSWebRpt.Web.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">

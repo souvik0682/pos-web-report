@@ -44,6 +44,7 @@
     <Compile Include="IBase.cs" />
     <Compile Include="ICommon.cs" />
     <Compile Include="IMenu.cs" />
+    <Compile Include="IReport.cs" />
     <Compile Include="IRole.cs" />
     <Compile Include="IRoleMenu.cs" />
     <Compile Include="ISearchCriteria.cs" />

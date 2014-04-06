@@ -288,4 +288,16 @@
   <data name="R00057" xml:space="preserve">
     <value>Click to add new user</value>
   </data>
+  <data name="R00058" xml:space="preserve">
+    <value>Click to generate report</value>
+  </data>
+  <data name="R00059" xml:space="preserve">
+    <value>Please select a valid image file</value>
+  </data>
+  <data name="R00060" xml:space="preserve">
+    <value>Click to save</value>
+  </data>
+  <data name="R00061" xml:space="preserve">
+    <value>Click to quit</value>
+  </data>
 </root>
