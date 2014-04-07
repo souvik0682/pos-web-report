@@ -332,7 +332,6 @@
     <EmbeddedResource Include="RDLC\CashierWiseSale.rdlc" />
     <EmbeddedResource Include="RDLC\CashierWiseSaleSummary.rdlc" />
     <EmbeddedResource Include="RDLC\ItemWiseSale.rdlc" />
-    <EmbeddedResource Include="RDLC\ItemWiseSaleWithCombo.rdlc" />
     <EmbeddedResource Include="RDLC\SaleRegister.rdlc" />
     <EmbeddedResource Include="RDLC\StockLedger.rdlc" />
     <EmbeddedResource Include="RDLC\VatItemWise.rdlc" />

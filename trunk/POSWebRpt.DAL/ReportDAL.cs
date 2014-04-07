@@ -169,15 +169,17 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[rpt].[]";
+                helper.CommandText = "[dbo].[sp_rpt_SALESREGISTER]";
                 helper.CommandType = CommandType.StoredProcedure;
-                helper.Parameters.Add("@", 1);
+                helper.Parameters.Add("@StartDate", criteria.FromDate);
+                helper.Parameters.Add("@EndDate", criteria.ToDate);
                 helper.Open();
                 helper.ExecuteReader(CommandBehavior.CloseConnection);
 
                 while (helper.DataReader.Read())
                 {
                     ReportEntity report = new ReportEntity(helper.DataReader);
+                    report.LoadSalesRegister(helper.DataReader);
                     lstData.Add(report);
                 }
 

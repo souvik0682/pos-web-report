@@ -90,6 +90,19 @@ namespace POSWebRpt.Entity
             this.NetAmountCreditCard = this.BillAmoutCreditCard - this.RefundAmoutCreditCard;
         }
 
+        public void LoadSalesRegister(SqlDataReader reader)
+        {
+            this.BillNo = Convert.ToString(reader["billno"]);
+            this.BillDate = Convert.ToDateTime(reader["billdate"]);
+            this.CounterName = Convert.ToString(reader["Counter"]);
+            this.ItemName = Convert.ToString(reader["itemDescr"]);
+            this.Quantity = Convert.ToInt32(reader["Qty"]);
+            this.BasicAmount = Convert.ToDecimal(reader["BasicAmt"]);
+            this.VAT = Convert.ToDecimal(reader["VATAmount"]);
+            this.BillAmount = Convert.ToDecimal(reader["TotalAmount"]);
+            this.RefundReason = Convert.ToString(reader["Reason"]);
+        }
+
         #endregion
     }
 }

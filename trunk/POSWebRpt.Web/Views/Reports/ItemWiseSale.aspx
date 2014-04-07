@@ -51,6 +51,9 @@
                         <td style="padding-right:10px;">Transaction Type:<span class="errormessage">*</span></td>
                         <td><asp:DropDownList ID="ddlTxnType" runat="server" AutoPostBack="false" Width="200" CssClass="chzn-select medium-select single"><asp:ListItem Value="0" Text="All"></asp:ListItem></asp:DropDownList></td>
                     </tr>
+                    <tr>
+                        <td colspan="4">&nbsp;</td>
+                    </tr>
                     <tr>    
                         <td style="padding-right:10px;">Print Combo Items:<span class="errormessage">*</span></td>
                         <td style="padding-right:20px;"><asp:CheckBox ID="chkCombo" runat="server" /></td>
