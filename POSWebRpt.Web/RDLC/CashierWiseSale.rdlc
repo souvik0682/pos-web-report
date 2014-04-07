@@ -1181,7 +1181,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Grand Total :</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1213,7 +1215,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Sum(Fields!BillAmoutCash.Value), "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1245,7 +1249,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Sum(Fields!BillAmoutCreditCard.Value), "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1277,7 +1283,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Sum(Fields!RefundAmoutCash.Value), "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1309,7 +1317,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Sum(Fields!RefundAmoutCreditCard.Value), "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1341,7 +1351,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Sum(Fields!NetAmountCash.Value), "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1373,7 +1385,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Sum(Fields!NetAmountCreditCard.Value), "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1393,6 +1407,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1636,7 +1651,7 @@ KOLKATA-700075,W.BENGAL</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
           <Height>0.25in</Height>
-          <Width>3.1in</Width>
+          <Width>2.6in</Width>
           <Style>
             <Border>
               <Style>None</Style>

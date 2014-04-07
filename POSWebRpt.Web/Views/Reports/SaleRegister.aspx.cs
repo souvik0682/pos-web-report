@@ -32,12 +32,16 @@ namespace POSWebRpt.Web.Views.Reports
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            RetriveParameters();
-            CheckUserAccess();
-
-            if (!IsPostBack)
+            try
             {
-
+                RetriveParameters();
+                CheckUserAccess();
+                SetAttributes();
+            }
+            catch (Exception ex)
+            {
+                CommonBLL.HandleException(ex, this.Server.MapPath(this.Request.ApplicationPath).Replace("/", "\\"));
+                ToggleErrorPanel(true, ex.Message);
             }
         }
 
@@ -49,7 +53,8 @@ namespace POSWebRpt.Web.Views.Reports
             }
             catch (Exception ex)
             {
-                GeneralFunctions.RegisterErrorAlertScript(this, ex.Message);
+                CommonBLL.HandleException(ex, this.Server.MapPath(this.Request.ApplicationPath).Replace("/", "\\"));
+                ToggleErrorPanel(true, ex.Message);
             }
         }
 
@@ -62,6 +67,10 @@ namespace POSWebRpt.Web.Views.Reports
             if (!IsPostBack)
             {
                 btnShow.ToolTip = ResourceManager.GetStringWithoutName("R00058");
+                ceFromDt.Format = Convert.ToString(ConfigurationManager.AppSettings["DateFormat"]);
+                ceToDt.Format = Convert.ToString(ConfigurationManager.AppSettings["DateFormat"]);
+                rfvFromDt.ErrorMessage = ResourceManager.GetStringWithoutName("R00062");
+                rfvToDt.ErrorMessage = ResourceManager.GetStringWithoutName("R00063");
             }
         }
 
@@ -98,7 +107,22 @@ namespace POSWebRpt.Web.Views.Reports
 
         private void BuildCriteria(ReportCriteria criteria)
         {
+            if (txtFromDt.Text.Trim() != string.Empty) criteria.FromDate = Convert.ToDateTime(txtFromDt.Text, _culture);
+            if (txtToDt.Text.Trim() != string.Empty) criteria.ToDate = Convert.ToDateTime(txtToDt.Text, _culture);
+        }
 
+        private void ToggleErrorPanel(bool isVisible, string errorMessage)
+        {
+            if (isVisible)
+            {
+                dvSync.Style["display"] = "";
+                dvErrMsg.InnerHtml = GeneralFunctions.FormatErrorMessage(errorMessage);
+            }
+            else
+            {
+                dvSync.Style["display"] = "none";
+                dvErrMsg.InnerHtml = string.Empty;
+            }
         }
 
         #endregion
