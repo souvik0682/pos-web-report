@@ -20,7 +20,7 @@ namespace POSWebRpt.DAL
             {
                 helper.CommandText = "[dbo].[sp_rpt_SALEREFUNDREGISTER]";
                 helper.CommandType = CommandType.StoredProcedure;
-                helper.Parameters.Add("@TranType", criteria.TransactionTypeId);
+                helper.Parameters.Add("@TranType", criteria.TransactionType);
                 helper.Parameters.Add("@StartDate", criteria.FromDate);
                 helper.Parameters.Add("@EndDate", criteria.ToDate);
                 helper.Open();
@@ -122,6 +122,7 @@ namespace POSWebRpt.DAL
             {
                 helper.CommandText = "[dbo].[sp_rpt_ITEMWISESALE]";
                 helper.CommandType = CommandType.StoredProcedure;
+                //helper.Parameters.Add("@TranType", criteria.TransactionType);
                 helper.Parameters.Add("@StartDate", criteria.FromDate);
                 helper.Parameters.Add("@EndDate", criteria.ToDate);
                 helper.Open();
@@ -162,6 +163,32 @@ namespace POSWebRpt.DAL
 
         //    return lstData;
         //}
+
+        public static List<ReportEntity> GetCounterWiseSale(ReportCriteria criteria)
+        {
+            List<ReportEntity> lstData = new List<ReportEntity>();
+
+            using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
+            {
+                helper.CommandText = "[dbo].[sp_rpt_ITEMWISESALE]";
+                helper.CommandType = CommandType.StoredProcedure;
+                helper.Parameters.Add("@StartDate", criteria.FromDate);
+                helper.Parameters.Add("@EndDate", criteria.ToDate);
+                helper.Open();
+                helper.ExecuteReader(CommandBehavior.CloseConnection);
+
+                while (helper.DataReader.Read())
+                {
+                    ReportEntity report = new ReportEntity(helper.DataReader);
+                    report.LoadSalesRegister(helper.DataReader);
+                    lstData.Add(report);
+                }
+
+                helper.Close();
+            }
+
+            return lstData;
+        }
 
         public static List<ReportEntity> GetSaleRegister(ReportCriteria criteria)
         {
