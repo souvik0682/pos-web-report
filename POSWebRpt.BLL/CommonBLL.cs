@@ -253,6 +253,21 @@ namespace POSWebRpt.BLL
         }
 
         #endregion
+
         #endregion
+
+        public static List<BaseEntity<string>> GetTransactionType()
+        {
+            List<BaseEntity<string>> lstType = new List<BaseEntity<string>>();
+            lstType.Add(new BaseEntity<string>() { Id = "A", Desc = "All" });
+            lstType.Add(new BaseEntity<string>() { Id = "B", Desc = "Bill" });
+            lstType.Add(new BaseEntity<string>() { Id = "R", Desc = "Refund" });
+            return lstType;
+        }
+
+        public static List<IItemGroup> GetCounter()
+        {
+            return CommonDAL.GetItemGroup('T', 0, 1);
+        }
     }
 }

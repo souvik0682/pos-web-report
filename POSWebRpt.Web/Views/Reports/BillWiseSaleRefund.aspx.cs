@@ -95,7 +95,8 @@ namespace POSWebRpt.Web.Views.Reports
 
         private void PopulateTransactionType()
         {
-
+            List<BaseEntity<string>> lstType = CommonBLL.GetTransactionType();
+            GeneralFunctions.PopulateDropDownList<BaseEntity<string>>(ddlTxnType, lstType, "Id", "Desc", false);
         }
 
         private void GenerateReport()
@@ -107,8 +108,8 @@ namespace POSWebRpt.Web.Views.Reports
             List<ReportEntity> lstData = ReportBLL.GetBillWiseSaleRefund(criteria);
 
             ReportDataSource dsGeneral = new ReportDataSource("dsReportData", lstData);
-            reportManager.AddParameter("FromDate", string.Empty);
-            reportManager.AddParameter("ToDate", string.Empty);
+            reportManager.AddParameter("FromDate", txtFromDt.Text.Trim());
+            reportManager.AddParameter("ToDate", txtToDt.Text.Trim());
             reportManager.AddDataSource(dsGeneral);
             reportManager.Show();
         }
@@ -117,7 +118,7 @@ namespace POSWebRpt.Web.Views.Reports
         {
             if (txtFromDt.Text.Trim() != string.Empty) criteria.FromDate = Convert.ToDateTime(txtFromDt.Text, _culture);
             if (txtToDt.Text.Trim() != string.Empty) criteria.ToDate = Convert.ToDateTime(txtToDt.Text, _culture);
-            criteria.TransactionTypeId = Convert.ToInt32(ddlTxnType.SelectedValue);
+            criteria.TransactionType = ddlTxnType.SelectedValue;
         }
 
         private void ToggleErrorPanel(bool isVisible, string errorMessage)

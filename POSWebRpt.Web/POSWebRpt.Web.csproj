@@ -137,6 +137,7 @@
     <Content Include="Views\Reports\BillWiseSaleRefund.aspx" />
     <Content Include="Views\Reports\CashierLog.aspx" />
     <Content Include="Views\Reports\CashierWiseSale.aspx" />
+    <Content Include="Views\Reports\CounterWiseSale.aspx" />
     <Content Include="Views\Reports\ItemWiseSale.aspx" />
     <Content Include="Views\Reports\SaleRegister.aspx" />
     <Content Include="Views\Reports\StockLedger.aspx" />
@@ -217,6 +218,13 @@
     </Compile>
     <Compile Include="Views\Reports\CashierWiseSale.aspx.designer.cs">
       <DependentUpon>CashierWiseSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\CounterWiseSale.aspx.cs">
+      <DependentUpon>CounterWiseSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\CounterWiseSale.aspx.designer.cs">
+      <DependentUpon>CounterWiseSale.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Reports\ItemWiseSale.aspx.cs">
       <DependentUpon>ItemWiseSale.aspx</DependentUpon>
@@ -329,8 +337,8 @@
   <ItemGroup>
     <EmbeddedResource Include="RDLC\BillWiseSaleRefund.rdlc" />
     <EmbeddedResource Include="RDLC\CashierLog.rdlc" />
-    <EmbeddedResource Include="RDLC\CashierWiseSale.rdlc" />
     <EmbeddedResource Include="RDLC\CashierWiseSaleSummary.rdlc" />
+    <EmbeddedResource Include="RDLC\CounterWiseSale.rdlc" />
     <EmbeddedResource Include="RDLC\ItemWiseSale.rdlc" />
     <EmbeddedResource Include="RDLC\SaleRegister.rdlc" />
     <EmbeddedResource Include="RDLC\StockLedger.rdlc" />

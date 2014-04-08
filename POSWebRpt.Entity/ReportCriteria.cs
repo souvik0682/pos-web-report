@@ -14,7 +14,7 @@ namespace POSWebRpt.Entity
         public DateTime? FromDate { get; set; }
         public DateTime? ToDate { get; set; }
         public int CashierId { get; set; }
-        public int TransactionTypeId { get; set; }
+        public string TransactionType { get; set; }
         public int CounterId { get; set; }
 
         #endregion

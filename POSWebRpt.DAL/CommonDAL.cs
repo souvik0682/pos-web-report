@@ -6,6 +6,7 @@ using System.Text;
 using POSWebRpt.DAL.DBManager;
 using POSWebRpt.Entity;
 using POSWebRpt.Utilities;
+using POSWebRpt.Common;
 
 namespace POSWebRpt.DAL
 {
@@ -43,5 +44,32 @@ namespace POSWebRpt.DAL
         }
 
         #endregion
+
+        public static List<IItemGroup> GetItemGroup(char mode,int lvl ,Int64 userId)
+        {
+            List<IItemGroup> lstGroup = new List<IItemGroup>();
+
+            using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
+            {
+                helper.CommandText = "[dbo].[sp_Manage_ITEMGROUP]";
+                helper.CommandType = CommandType.StoredProcedure;
+                helper.Parameters.Add("@Mode", mode);
+                helper.Parameters.Add("@UserID", userId);
+                helper.Parameters.Add("@Lvl", lvl);
+                helper.Parameters.Add("@Result", SqlDbType.Int, ParameterDirection.Output);
+                helper.Open();
+                helper.ExecuteReader(CommandBehavior.CloseConnection);
+
+                while (helper.DataReader.Read())
+                {
+                    IItemGroup group = new ItemGroupEntity(helper.DataReader);
+                    lstGroup.Add(group);
+                }
+
+                helper.Close();
+            }
+
+            return lstGroup;
+        }
     }
 }

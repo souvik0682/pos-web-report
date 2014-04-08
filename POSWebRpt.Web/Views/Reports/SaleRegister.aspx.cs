@@ -99,8 +99,8 @@ namespace POSWebRpt.Web.Views.Reports
             List<ReportEntity> lstData = ReportBLL.GetSaleRegister(criteria);
 
             ReportDataSource dsGeneral = new ReportDataSource("dsReportData", lstData);
-            reportManager.AddParameter("FromDate", string.Empty);
-            reportManager.AddParameter("ToDate", string.Empty);
+            reportManager.AddParameter("FromDate", txtFromDt.Text.Trim());
+            reportManager.AddParameter("ToDate", txtToDt.Text.Trim());
             reportManager.AddDataSource(dsGeneral);
             reportManager.Show();
         }

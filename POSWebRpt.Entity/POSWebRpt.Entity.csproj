@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="ActionResult.cs" />
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="ItemGroupEntity.cs" />
     <Compile Include="ReportCriteria.cs" />
     <Compile Include="Interface\IUser.cs" />
     <Compile Include="Interface\IEntityBase.cs" />

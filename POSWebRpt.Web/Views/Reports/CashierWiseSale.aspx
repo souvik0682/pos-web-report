@@ -38,7 +38,7 @@
                             <asp:TextBox ID="txtToDt" runat="server" Width="80" MaxLength="10"></asp:TextBox>
                             <cc1:calendarextender ID="ceToDt" runat="server" TargetControlID="txtToDt"></cc1:calendarextender>                                            
                         </td>
-                        <td>&nbsp;</td>
+                        <td><asp:Button ID="btnShow" runat="server" Text="Show" CssClass="button" ValidationGroup="Show" OnClick="btnShow_Click" /></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
@@ -46,13 +46,6 @@
                         <td>&nbsp;</td>
                         <td><asp:RequiredFieldValidator ID="rfvToDt" runat="server" CssClass="errormessage" ControlToValidate="txtToDt" Display="Dynamic" ForeColor="" SetFocusOnError="True" ValidationGroup="Show"></asp:RequiredFieldValidator></td>
                         <td></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-right:10px;">Cashier:</td>
-                        <td style="padding-right:20px;"><asp:DropDownList ID="ddlCashier" runat="server" AutoPostBack="false" Width="250" CssClass="chzn-select medium-select single"><asp:ListItem Value="0" Text="All"></asp:ListItem></asp:DropDownList></td>
-                        <td style="padding-right:10px;">Cashier Summary:</td>
-                        <td style="padding-right:20px;"><asp:CheckBox ID="chkSummary" runat="server" /></td>
-                        <td><asp:Button ID="btnShow" runat="server" Text="Show" CssClass="button" ValidationGroup="Show" OnClick="btnShow_Click" /></td>
                     </tr>
                 </table>
             </div>

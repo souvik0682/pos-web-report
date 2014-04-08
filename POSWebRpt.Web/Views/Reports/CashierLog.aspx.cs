@@ -32,12 +32,16 @@ namespace POSWebRpt.Web.Views.Reports
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            RetriveParameters();
-            CheckUserAccess();
-
-            if (!IsPostBack)
+            try
             {
-
+                RetriveParameters();
+                CheckUserAccess();
+                SetAttributes();
+            }
+            catch (Exception ex)
+            {
+                CommonBLL.HandleException(ex, this.Server.MapPath(this.Request.ApplicationPath).Replace("/", "\\"));
+                ToggleErrorPanel(true, ex.Message);
             }
         }
 
@@ -49,7 +53,8 @@ namespace POSWebRpt.Web.Views.Reports
             }
             catch (Exception ex)
             {
-                GeneralFunctions.RegisterErrorAlertScript(this, ex.Message);
+                CommonBLL.HandleException(ex, this.Server.MapPath(this.Request.ApplicationPath).Replace("/", "\\"));
+                ToggleErrorPanel(true, ex.Message);
             }
         }
 
@@ -59,9 +64,13 @@ namespace POSWebRpt.Web.Views.Reports
 
         private void SetAttributes()
         {
+            ToggleErrorPanel(false, string.Empty);
+
             if (!IsPostBack)
             {
                 btnShow.ToolTip = ResourceManager.GetStringWithoutName("R00058");
+                ceFromDt.Format = Convert.ToString(ConfigurationManager.AppSettings["DateFormat"]);
+                ceToDt.Format = Convert.ToString(ConfigurationManager.AppSettings["DateFormat"]);
             }
         }
 
@@ -86,22 +95,35 @@ namespace POSWebRpt.Web.Views.Reports
             ReportBLL cls = new ReportBLL();
             LocalReportManager reportManager = new LocalReportManager(rptViewer, "CashierLog", ConfigurationManager.AppSettings["ReportNamespace"].ToString(), ConfigurationManager.AppSettings["ReportPath"].ToString());
             ReportCriteria criteria = new ReportCriteria();
-            BuildCriteria(criteria);
+            //BuildCriteria(criteria);
             List<ReportEntity> lstData = ReportBLL.GetCashierLog(criteria);
 
             ReportDataSource dsGeneral = new ReportDataSource("dsReportData", lstData);
-            reportManager.AddParameter("FromDate", string.Empty);
-            reportManager.AddParameter("ToDate", string.Empty);
+            reportManager.AddParameter("FromDate", txtFromDt.Text.Trim());
+            reportManager.AddParameter("ToDate", txtToDt.Text.Trim());
             reportManager.AddDataSource(dsGeneral);
             reportManager.Show();
         }
 
-        private void BuildCriteria(ReportCriteria criteria)
-        {
+        //private void BuildCriteria(ReportCriteria criteria)
+        //{
 
+        //}
+
+        private void ToggleErrorPanel(bool isVisible, string errorMessage)
+        {
+            if (isVisible)
+            {
+                dvSync.Style["display"] = "";
+                dvErrMsg.InnerHtml = GeneralFunctions.FormatErrorMessage(errorMessage);
+            }
+            else
+            {
+                dvSync.Style["display"] = "none";
+                dvErrMsg.InnerHtml = string.Empty;
+            }
         }
 
         #endregion
-
     }
 }
