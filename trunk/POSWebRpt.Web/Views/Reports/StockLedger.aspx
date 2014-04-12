@@ -29,12 +29,12 @@
                 <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                         <td style="padding-right:10px;">Start Date:<span class="errormessage">*</span></td>
-                        <td style="padding-right:20px;">
+                        <td style="padding-right:30px;">
                             <asp:TextBox ID="txtFromDt" runat="server" Width="80" MaxLength="10"></asp:TextBox>
                             <cc1:calendarextender ID="ceFromDt" runat="server" TargetControlID="txtFromDt"></cc1:calendarextender>                                            
                         </td>
                         <td style="padding-right:10px;">End Date:<span class="errormessage">*</span></td>
-                        <td style="padding-right:20px;">
+                        <td style="padding-right:10px;">
                             <asp:TextBox ID="txtToDt" runat="server" Width="80" MaxLength="10"></asp:TextBox>
                             <cc1:calendarextender ID="ceToDt" runat="server" TargetControlID="txtToDt"></cc1:calendarextender>                                            
                         </td>

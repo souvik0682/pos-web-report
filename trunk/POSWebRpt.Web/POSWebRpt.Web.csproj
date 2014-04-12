@@ -66,9 +66,9 @@
     <Content Include="Images\bg.jpg" />
     <Content Include="Images\chosen-sprite%402x.png" />
     <Content Include="Images\chosen-sprite.png" />
+    <Content Include="Images\company_logo.jpg" />
     <Content Include="Images\Edge_Screen.jpg" />
     <Content Include="Images\edit.png" />
-    <Content Include="Images\logo_benline.jpg" />
     <Content Include="Images\MUST_LOGO3.jpg" />
     <Content Include="Images\pos_logo.jpg" />
     <Content Include="Images\pos_logo2.jpg" />
@@ -91,7 +91,6 @@
     <Content Include="Styles\jqueryui\jquery.autocomplete.css" />
     <Content Include="Styles\jqueryui\jquery.ui.dialog.css" />
     <Content Include="Styles\jqueryui\ui.jqgrid.css" />
-    <Content Include="Styles\Menu.css" />
     <Content Include="Styles\POS.css" />
     <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
