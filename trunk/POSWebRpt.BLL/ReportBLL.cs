@@ -45,9 +45,9 @@ namespace POSWebRpt.BLL
         //    return ReportDAL.GetItemWiseSaleWithCombo(criteria);
         //}
 
-        public static List<ReportEntity> GetCounterWiseSale(ReportCriteria criteria)
+        public static List<ReportEntity> GetCounterWiseSaleSummary(ReportCriteria criteria)
         {
-            return ReportDAL.GetCounterWiseSale(criteria);
+            return ReportDAL.GetCounterWiseSaleSummary(criteria);
         }
 
         public static List<ReportEntity> GetSaleRegister(ReportCriteria criteria)
