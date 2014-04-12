@@ -121,7 +121,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[mock].[sp_rpt_ITEMWISESALE]";
+                helper.CommandText = "[rpt].[sp_rpt_ITEMWISESALE]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@StartDate", criteria.FromDate);
                 helper.Parameters.Add("@EndDate", criteria.ToDate);
