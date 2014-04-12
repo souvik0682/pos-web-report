@@ -38,8 +38,6 @@ namespace POSWebRpt.Web.Views.Reports
                 RetriveParameters();
                 CheckUserAccess();
                 SetAttributes();
-                PopulateTransactionType();
-                PopulateCounter();
             }
             catch (Exception ex)
             {
@@ -93,17 +91,17 @@ namespace POSWebRpt.Web.Views.Reports
             }
         }
 
-        private void PopulateTransactionType()
-        {
-            List<BaseEntity<string>> lstType = CommonBLL.GetTransactionType();
-            GeneralFunctions.PopulateDropDownList<BaseEntity<string>>(ddlTxnType, lstType, "Id", "Desc", false);
-        }
+        //private void PopulateTransactionType()
+        //{
+        //    List<BaseEntity<string>> lstType = CommonBLL.GetTransactionType();
+        //    GeneralFunctions.PopulateDropDownList<BaseEntity<string>>(ddlTxnType, lstType, "Id", "Desc", false);
+        //}
 
-        private void PopulateCounter()
-        {
-            List<IItemGroup> lstCounter = CommonBLL.GetCounter();
-            GeneralFunctions.PopulateDropDownListAll<IItemGroup>(ddlCounter, lstCounter, "Id", "Name");
-        }
+        //private void PopulateCounter()
+        //{
+        //    List<IItemGroup> lstCounter = CommonBLL.GetCounter();
+        //    GeneralFunctions.PopulateDropDownListAll<IItemGroup>(ddlCounter, lstCounter, "Id", "Name");
+        //}
 
         private void GenerateReport()
         {
@@ -124,8 +122,8 @@ namespace POSWebRpt.Web.Views.Reports
         {
             if (txtFromDt.Text.Trim() != string.Empty) criteria.FromDate = Convert.ToDateTime(txtFromDt.Text, _culture);
             if (txtToDt.Text.Trim() != string.Empty) criteria.ToDate = Convert.ToDateTime(txtToDt.Text, _culture);
-            criteria.TransactionType = ddlTxnType.SelectedValue;
-            criteria.CounterId = Convert.ToInt32(ddlCounter.SelectedValue);
+            //criteria.TransactionType = ddlTxnType.SelectedValue;
+            //criteria.CounterId = Convert.ToInt32(ddlCounter.SelectedValue);
         }
 
         private void ToggleErrorPanel(bool isVisible, string errorMessage)

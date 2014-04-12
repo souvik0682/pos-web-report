@@ -10,7 +10,7 @@
 namespace POSWebRpt.Web.Views.Reports {
     
     
-    public partial class ItemWiseSale {
+    public partial class CounterWiseSale {
         
         /// <summary>
         /// dvSync control.

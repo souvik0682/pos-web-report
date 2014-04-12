@@ -32,9 +32,17 @@
           <DataField>Cashier</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ItemCode">
-          <DataField>ItemCode</DataField>
+        <Field Name="ItemGroupId">
+          <DataField>ItemGroupId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ItemGroupName">
+          <DataField>ItemGroupName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemId">
+          <DataField>ItemId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="ItemName">
           <DataField>ItemName</DataField>
@@ -50,6 +58,10 @@
         </Field>
         <Field Name="VAT">
           <DataField>VAT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="STax">
+          <DataField>STax</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="RoundOff">
@@ -68,6 +80,14 @@
           <DataField>BillAmoutCreditCard</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
+        <Field Name="RefundAmoutCash">
+          <DataField>RefundAmoutCash</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RefundAmoutCreditCard">
+          <DataField>RefundAmoutCreditCard</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
         <Field Name="NetAmount">
           <DataField>NetAmount</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
@@ -80,17 +100,13 @@
           <DataField>NetAmountCreditCard</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="RefundAmoutCash">
-          <DataField>RefundAmoutCash</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="RefundAmoutCreditCard">
-          <DataField>RefundAmoutCreditCard</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
         <Field Name="RefundReason">
           <DataField>RefundReason</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CounterId">
+          <DataField>CounterId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="CounterName">
           <DataField>CounterName</DataField>
@@ -112,8 +128,8 @@
           <DataField>LoginBalance</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="LogutoutBalance">
-          <DataField>LogutoutBalance</DataField>
+        <Field Name="LogoutBalance">
+          <DataField>LogoutBalance</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="OpeningBalance">
@@ -149,6 +165,7 @@
         <rd:DataSetName>POSWebRpt.BLL</rd:DataSetName>
         <rd:TableName>ReportBLL</rd:TableName>
         <rd:ObjectDataSourceSelectMethod>GetCashierLog</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceSelectMethodSignature>System.Collections.Generic.List`1[POSWebRpt.Entity.ReportEntity] GetCashierLog(POSWebRpt.Entity.ReportCriteria)</rd:ObjectDataSourceSelectMethodSignature>
         <rd:ObjectDataSourceType>POSWebRpt.BLL.ReportBLL, POSWebRpt.BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
@@ -528,7 +545,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!LogutoutBalance.Value, "N2")</Value>
+                              <Value>=Format(Fields!LogoutBalance.Value, "N2")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -549,6 +566,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>

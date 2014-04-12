@@ -54,6 +54,7 @@ namespace POSWebRpt.DAL
                 while (helper.DataReader.Read())
                 {
                     ReportEntity report = new ReportEntity(helper.DataReader);
+                    report.LoadCashierLog(helper.DataReader);
                     lstData.Add(report);
                 }
 
@@ -120,9 +121,8 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[dbo].[sp_rpt_ITEMWISESALE]";
+                helper.CommandText = "[mock].[sp_rpt_ITEMWISESALE]";
                 helper.CommandType = CommandType.StoredProcedure;
-                //helper.Parameters.Add("@TranType", criteria.TransactionType);
                 helper.Parameters.Add("@StartDate", criteria.FromDate);
                 helper.Parameters.Add("@EndDate", criteria.ToDate);
                 helper.Open();
@@ -131,6 +131,7 @@ namespace POSWebRpt.DAL
                 while (helper.DataReader.Read())
                 {
                     ReportEntity report = new ReportEntity(helper.DataReader);
+                    report.LoadItemWiseSale(helper.DataReader);
                     lstData.Add(report);
                 }
 
@@ -164,13 +165,13 @@ namespace POSWebRpt.DAL
         //    return lstData;
         //}
 
-        public static List<ReportEntity> GetCounterWiseSale(ReportCriteria criteria)
+        public static List<ReportEntity> GetCounterWiseSaleSummary(ReportCriteria criteria)
         {
             List<ReportEntity> lstData = new List<ReportEntity>();
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[dbo].[sp_rpt_ITEMWISESALE]";
+                helper.CommandText = "[mock].[sp_rpt_ITEMWISESALE]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@StartDate", criteria.FromDate);
                 helper.Parameters.Add("@EndDate", criteria.ToDate);
@@ -180,7 +181,7 @@ namespace POSWebRpt.DAL
                 while (helper.DataReader.Read())
                 {
                     ReportEntity report = new ReportEntity(helper.DataReader);
-                    report.LoadSalesRegister(helper.DataReader);
+                    report.LoadCounterWiseSaleSummary(helper.DataReader);
                     lstData.Add(report);
                 }
 
@@ -231,6 +232,7 @@ namespace POSWebRpt.DAL
                 while (helper.DataReader.Read())
                 {
                     ReportEntity report = new ReportEntity(helper.DataReader);
+                    report.LoadStockLedger(helper.DataReader);
                     lstData.Add(report);
                 }
 
@@ -255,6 +257,7 @@ namespace POSWebRpt.DAL
                 while (helper.DataReader.Read())
                 {
                     ReportEntity report = new ReportEntity(helper.DataReader);
+                    report.LoadItemWiseVat(helper.DataReader);
                     lstData.Add(report);
                 }
 
@@ -279,6 +282,7 @@ namespace POSWebRpt.DAL
                 while (helper.DataReader.Read())
                 {
                     ReportEntity report = new ReportEntity(helper.DataReader);
+                    report.LoadRestaurantWiseVat(helper.DataReader);
                     lstData.Add(report);
                 }
 

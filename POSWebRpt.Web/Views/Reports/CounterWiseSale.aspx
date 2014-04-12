@@ -1,4 +1,4 @@
-﻿<%@ Page Title=":: POS :: VAT Restaurant Wise" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="VatRestaurnatWise.aspx.cs" Inherits="POSWebRpt.Web.Views.Reports.VatRestaurnatWise" %>
+﻿<%@ Page Title=":: POS :: Counter Wise Sale Summary" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CounterWiseSale.aspx.cs" Inherits="POSWebRpt.Web.Views.Reports.CounterWiseSale" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
     Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
@@ -9,7 +9,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="container" runat="server">
-    <div id="headercaption">RESTAURANT WISE VAT</div>
+    <div id="headercaption">COUNTER WISE SALE SUMMARY</div>
     <div id="dvSync" runat="server" style="padding: 5px 0px 5px 0px; display: none;">
         <table width="100%" class="synpanel">
             <tr>
