@@ -75,7 +75,7 @@ namespace POSWebRpt.Entity
             this.BasicAmount = Convert.ToDecimal(reader["BasicAmt"]);
             this.VAT = Convert.ToDecimal(reader["VAT"]);
             this.STax = Convert.ToDecimal(reader["Stax"]);
-            //this.RoundOff = Convert.ToDecimal(reader["RoundOff"]);
+            this.RoundOff = Convert.ToDecimal(reader["RoundOff"]);
             this.BillAmount = Convert.ToDecimal(reader["Total"]);
         }
 
