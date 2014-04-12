@@ -145,7 +145,16 @@ namespace POSWebRpt.Entity
 
         public void LoadStockLedger(SqlDataReader reader)
         {
-
+            this.CounterName = Convert.ToString(reader["Descr"]);
+            this.ItemGroupName = Convert.ToString(reader["descr1"]);
+            this.ItemId = Convert.ToInt32(reader["pk_itemID"]);
+            this.ItemName = Convert.ToString(reader["ItemDescr"]);
+            this.OpeningBalance = Convert.ToInt32(reader["TQTY"]);
+            this.QuantityReceipt = Convert.ToInt32(reader["TQTY"]);
+            this.QuantityAdjusted = Convert.ToInt32(reader["TQTY"]);
+            this.QuantityRejected = Convert.ToInt32(reader["TQTY"]);
+            this.QuantitySold = Convert.ToInt32(reader["TQTY"]);
+            this.ClosingBalance = Convert.ToInt32(reader["TQTY"]);
         }
 
         public void LoadItemWiseVat(SqlDataReader reader)

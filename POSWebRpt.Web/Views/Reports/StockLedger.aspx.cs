@@ -12,6 +12,7 @@ using POSWebRpt.Entity;
 using POSWebRpt.Utilities;
 using POSWebRpt.Utilities.ReportManager;
 using POSWebRpt.Utilities.ResourceManager;
+using POSWebRpt.Common;
 
 namespace POSWebRpt.Web.Views.Reports
 {

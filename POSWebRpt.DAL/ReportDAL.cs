@@ -223,9 +223,13 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[rpt].[]";
+                helper.CommandText = "[rpt].[sp_rpt_STOCKREGISTER]";
                 helper.CommandType = CommandType.StoredProcedure;
-                helper.Parameters.Add("@", 1);
+                helper.Parameters.Add("@StartDate", criteria.FromDate);
+                helper.Parameters.Add("@EndDate", criteria.ToDate);
+                //helper.Parameters.Add("@Mode", criteria.FromDate);
+                //helper.Parameters.Add("@OBDate", criteria.FromDate);
+                //helper.Parameters.Add("@ItemCode", criteria.FromDate);
                 helper.Open();
                 helper.ExecuteReader(CommandBehavior.CloseConnection);
 
