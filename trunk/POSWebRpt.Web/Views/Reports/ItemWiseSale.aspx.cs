@@ -13,6 +13,7 @@ using POSWebRpt.Utilities;
 using POSWebRpt.Utilities.ReportManager;
 using POSWebRpt.Utilities.ResourceManager;
 using POSWebRpt.Common;
+using System.Data;
 
 namespace POSWebRpt.Web.Views.Reports
 {
@@ -33,16 +34,21 @@ namespace POSWebRpt.Web.Views.Reports
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+            if (!IsPostBack)
             {
-                RetriveParameters();
-                CheckUserAccess();
-                SetAttributes();
-            }
-            catch (Exception ex)
-            {
-                CommonBLL.HandleException(ex, this.Server.MapPath(this.Request.ApplicationPath).Replace("/", "\\"));
-                ToggleErrorPanel(true, ex.Message);
+
+                try
+                {
+                    RetriveParameters();
+                    CheckUserAccess();
+                    SetAttributes();
+                    LoadCounters();
+                }
+                catch (Exception ex)
+                {
+                    CommonBLL.HandleException(ex, this.Server.MapPath(this.Request.ApplicationPath).Replace("/", "\\"));
+                    ToggleErrorPanel(true, ex.Message);
+                }
             }
         }
 
@@ -123,7 +129,7 @@ namespace POSWebRpt.Web.Views.Reports
             if (txtFromDt.Text.Trim() != string.Empty) criteria.FromDate = Convert.ToDateTime(txtFromDt.Text, _culture);
             if (txtToDt.Text.Trim() != string.Empty) criteria.ToDate = Convert.ToDateTime(txtToDt.Text, _culture);
             //criteria.TransactionType = ddlTxnType.SelectedValue;
-            //criteria.CounterId = Convert.ToInt32(ddlCounter.SelectedValue);
+            criteria.CounterId = Convert.ToInt32(ddlCounters.SelectedValue);
         }
 
         private void ToggleErrorPanel(bool isVisible, string errorMessage)
@@ -140,7 +146,26 @@ namespace POSWebRpt.Web.Views.Reports
             }
         }
 
+        private void LoadCounters()
+        {
+            DataSet ds = new ReportBLL().GetAllItemGroup();
+            DataTable dt = ds.Tables[0];
+            DataRow dr = dt.NewRow();
+            dr["ItemGroupID"] = "0";
+            dr["Descr"] = "All Counters";
+            dt.Rows.InsertAt(dr, 0);
+            ddlCounters.DataValueField = "ItemGroupID";
+            ddlCounters.DataTextField = "Descr";
+            ddlCounters.DataSource = dt;
+            ddlCounters.DataBind();
+        }
+
         #endregion
+
+        protected void ddlCounters_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
 
     }
 }
