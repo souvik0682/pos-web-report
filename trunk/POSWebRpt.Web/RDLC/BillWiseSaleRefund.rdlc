@@ -176,25 +176,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.85417in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.9in</Width>
+              <Width>1.04583in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.1in</Width>
+              <Width>2.06875in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.1in</Width>
+              <Width>0.99583in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.9in</Width>
+              <Width>0.81667in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.9in</Width>
+              <Width>0.73333in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.1in</Width>
+              <Width>0.70417in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.1in</Width>
@@ -215,6 +215,7 @@
                             <TextRun>
                               <Value>Bill No</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -248,6 +249,7 @@
                             <TextRun>
                               <Value>Bill Date</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -281,6 +283,7 @@
                             <TextRun>
                               <Value>Cashier</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -314,6 +317,7 @@
                             <TextRun>
                               <Value>Basic</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -347,6 +351,7 @@
                             <TextRun>
                               <Value>VAT</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -380,6 +385,7 @@
                             <TextRun>
                               <Value>S.Tax</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -413,6 +419,7 @@
                             <TextRun>
                               <Value>Round Off</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -446,6 +453,7 @@
                             <TextRun>
                               <Value>Bill Amt</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -482,7 +490,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!BillType.Value</Value>
+                              <Value>=IIf(Fields!BillType.Value="B", "BILL", "REFUND")</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <TextDecoration>Underline</TextDecoration>
@@ -561,7 +569,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!BillNo.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -592,12 +602,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!BillDate.Value,"dd/MM/yyyy")</Value>
-                              <Style />
+                              <Value>=Format(Fields!BillDate.Value,"dd/MM/yy HH:mm")</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -625,7 +637,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Cashier.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -657,7 +672,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Fields!BasicAmount.Value, "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -689,7 +706,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Fields!VAT.Value, "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -721,7 +740,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Fields!STax.Value, "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -753,7 +774,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Fields!RoundOff.Value, "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -785,7 +808,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!BillAmount.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -823,6 +848,7 @@
                             <TextRun>
                               <Value>Total:</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -958,6 +984,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!BasicAmount.Value), "N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1003,6 +1030,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!VAT.Value), "N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1048,6 +1076,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!STax.Value), "N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1093,6 +1122,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!RoundOff.Value), "N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1138,6 +1168,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!BillAmount.Value),"N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1188,6 +1219,7 @@
                             <TextRun>
                               <Value>Grand Total :</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1290,6 +1322,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!BasicAmount.Value), "N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1324,6 +1357,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!VAT.Value), "N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1358,6 +1392,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!STax.Value), "N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1392,6 +1427,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!RoundOff.Value), "N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1426,6 +1462,7 @@
                             <TextRun>
                               <Value>=Format(Sum(Fields!BillAmount.Value),"N2")</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -1467,7 +1504,10 @@
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
           <TablixMembers>
-            <TablixMember />
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </TablixMember>
             <TablixMember>
               <Group Name="Group1">
                 <GroupExpressions>
@@ -1482,24 +1522,31 @@
               <TablixMembers>
                 <TablixMember>
                   <KeepWithGroup>After</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
                 </TablixMember>
                 <TablixMember>
                   <Group Name="Details" />
                 </TablixMember>
                 <TablixMember>
                   <KeepWithGroup>Before</KeepWithGroup>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
             <TablixMember>
               <KeepWithGroup>Before</KeepWithGroup>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <RepeatColumnHeaders>true</RepeatColumnHeaders>
+        <RepeatRowHeaders>true</RepeatRowHeaders>
+        <FixedColumnHeaders>true</FixedColumnHeaders>
+        <FixedRowHeaders>true</FixedRowHeaders>
         <DataSetName>dsReportData</DataSetName>
         <Top>0.25in</Top>
         <Height>1.25in</Height>
-        <Width>8.1in</Width>
+        <Width>8.31875in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1522,7 +1569,7 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
-  <Width>8.1in</Width>
+  <Width>8.35in</Width>
   <Page>
     <PageHeader>
       <Height>1in</Height>
@@ -1538,6 +1585,7 @@
                 <TextRun>
                   <Value>FOOD PLAZA</Value>
                   <Style>
+                    <FontFamily>Calibri</FontFamily>
                     <FontSize>14pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -1550,7 +1598,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Height>0.35in</Height>
-          <Width>8.1in</Width>
+          <Width>8.31875in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1570,7 +1618,9 @@
                 <TextRun>
                   <Value>OLD HOWRAH STATION COMPLEX,
 KOLKATA-700075,W.BENGAL</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -1581,7 +1631,7 @@ KOLKATA-700075,W.BENGAL</Value>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>0.35in</Top>
           <Height>0.25in</Height>
-          <Width>8.1in</Width>
+          <Width>8.31875in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -1601,7 +1651,9 @@ KOLKATA-700075,W.BENGAL</Value>
               <TextRuns>
                 <TextRun>
                   <Value>="From " + Parameters!FromDate.Value + " To " + Parameters!ToDate.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -1613,7 +1665,7 @@ KOLKATA-700075,W.BENGAL</Value>
           <Top>0.6in</Top>
           <Left>4.8in</Left>
           <Height>0.25in</Height>
-          <Width>3.3in</Width>
+          <Width>3.51875in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -1634,6 +1686,7 @@ KOLKATA-700075,W.BENGAL</Value>
                 <TextRun>
                   <Value>Billwise Sales / Refund Register</Value>
                   <Style>
+                    <FontFamily>Calibri</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -1719,7 +1772,7 @@ KOLKATA-700075,W.BENGAL</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
-          <Left>5in</Left>
+          <Left>5.25in</Left>
           <Height>0.25in</Height>
           <Width>3.1in</Width>
           <ZIndex>1</ZIndex>
