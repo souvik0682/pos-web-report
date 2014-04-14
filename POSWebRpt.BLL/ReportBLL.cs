@@ -69,5 +69,10 @@ namespace POSWebRpt.BLL
         {
             return ReportDAL.GetRestaurantWiseVat(criteria);
         }
+
+        public DataSet GetAllItemGroup()
+        {
+            return ReportDAL.GetAllItemGroup();
+        }
     }
 }
