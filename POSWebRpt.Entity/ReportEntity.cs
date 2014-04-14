@@ -12,7 +12,7 @@ namespace POSWebRpt.Entity
         #region IReport Members
 
         public String BillType { get; set; }
-        public String BillNo { get; set; }
+        public Int32 BillNo { get; set; }
         public DateTime BillDate { get; set; }
         public Int32 CashierID { get; set; }
         public String Cashier { get; set; }
@@ -69,7 +69,7 @@ namespace POSWebRpt.Entity
         public void LoadBillWiseSaleRefund(SqlDataReader reader)
         {
             this.BillType = Convert.ToString(reader["BillType"]);
-            this.BillNo = Convert.ToString(reader["BillNo"]);
+            this.BillNo = Convert.ToInt32(reader["BillNo"]);
             this.BillDate = Convert.ToDateTime(reader["BillDate"]);
             this.Cashier = Convert.ToString(reader["UserName"]);
             this.BasicAmount = Convert.ToDecimal(reader["BasicAmt"]);
@@ -132,9 +132,9 @@ namespace POSWebRpt.Entity
 
         public void LoadSalesRegister(SqlDataReader reader)
         {
-            this.BillNo = Convert.ToString(reader["billno"]);
+            this.BillNo = Convert.ToInt32(reader["billno"]);
             this.BillDate = Convert.ToDateTime(reader["billdate"]);
-            this.CounterName = Convert.ToString(reader["Counter"]);
+            this.CounterName = Convert.ToString(reader["Descr"]);
             this.ItemName = Convert.ToString(reader["itemDescr"]);
             this.Quantity = Convert.ToInt32(reader["Qty"]);
             this.BasicAmount = Convert.ToDecimal(reader["BasicAmt"]);
