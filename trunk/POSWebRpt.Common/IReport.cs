@@ -8,7 +8,7 @@ namespace POSWebRpt.Common
     public interface IReport
     {
         String BillType { get; set; }
-        String BillNo { get; set; }
+        Int32 BillNo { get; set; }
         DateTime BillDate { get; set; }
         Int32 CashierID { get; set; }
         String Cashier { get; set; }
