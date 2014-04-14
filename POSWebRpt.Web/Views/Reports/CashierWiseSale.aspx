@@ -36,7 +36,12 @@
                         <td style="padding-right:10px;">End Date:</td>
                         <td style="padding-right:10px;">
                             <asp:TextBox ID="txtToDt" runat="server" Width="80" MaxLength="10"></asp:TextBox>
-                            <cc1:calendarextender ID="ceToDt" runat="server" TargetControlID="txtToDt"></cc1:calendarextender>                                            
+                            <cc1:calendarextender ID="ceToDt" runat="server" TargetControlID="txtToDt"></cc1:calendarextender>
+                        </td>
+                        <td style="padding-right:10px;">Details:</td>       
+                        <td style="padding-right:10px;">                                     
+                            <asp:CheckBox ID="chkDetails" runat="server" oncheckedchanged="CheckBox1_CheckedChanged" />
+                         
                         </td>
                         <td><asp:Button ID="btnShow" runat="server" Text="Show" CssClass="button" ValidationGroup="Show" OnClick="btnShow_Click" /></td>
                     </tr>

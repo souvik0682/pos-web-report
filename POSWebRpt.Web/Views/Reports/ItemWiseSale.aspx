@@ -36,7 +36,12 @@
                         <td style="padding-right:10px;">End Date:<span class="errormessage">*</span></td>
                         <td style="padding-right:10px;">
                             <asp:TextBox ID="txtToDt" runat="server" Width="80" MaxLength="10"></asp:TextBox>
-                            <cc1:calendarextender ID="ceToDt" runat="server" TargetControlID="txtToDt"></cc1:calendarextender>                                            
+                            <cc1:calendarextender ID="ceToDt" runat="server" TargetControlID="txtToDt"></cc1:calendarextender>   
+                        </td>
+                        <td style="padding-right:10px;">Select Counter:<span class="errormessage">*</span></td> 
+                        <td>                                        
+                            <asp:DropDownList ID="ddlCounters" runat="server" AutoPostBack="true" onselectedindexchanged="ddlCounters_SelectedIndexChanged">
+                            </asp:DropDownList>
                         </td>
                         <td><asp:Button ID="btnShow" runat="server" Text="Show" CssClass="button" ValidationGroup="Show" OnClick="btnShow_Click" /></td>
                     </tr>

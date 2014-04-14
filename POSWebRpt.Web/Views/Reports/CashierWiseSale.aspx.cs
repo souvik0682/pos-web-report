@@ -101,7 +101,12 @@ namespace POSWebRpt.Web.Views.Reports
         private void GenerateSummaryReport()
         {
             ReportBLL cls = new ReportBLL();
-            LocalReportManager reportManager = new LocalReportManager(rptViewer, "CashierWiseSaleSummary", ConfigurationManager.AppSettings["ReportNamespace"].ToString(), ConfigurationManager.AppSettings["ReportPath"].ToString());
+            string rptName = "";
+            if (chkDetails.Checked == true)
+                rptName = "CashierWiseSaleDetail";
+            else
+                rptName = "CashierWiseSaleSummary";
+            LocalReportManager reportManager = new LocalReportManager(rptViewer, rptName , ConfigurationManager.AppSettings["ReportNamespace"].ToString(), ConfigurationManager.AppSettings["ReportPath"].ToString());
             ReportCriteria criteria = new ReportCriteria();
             BuildCriteria(criteria);
             List<ReportEntity> lstData = ReportBLL.GetCashierWiseSale(criteria);
@@ -135,6 +140,11 @@ namespace POSWebRpt.Web.Views.Reports
         }
 
         #endregion
+
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }
