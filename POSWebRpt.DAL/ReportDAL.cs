@@ -70,7 +70,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[dbo].[sp_rpt_CASHIERWISESALENEW]";
+                helper.CommandText = "[dbo].[sp_rpt_CASHIERWISESALE]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@Mode", criteria.CashierId);
                 helper.Parameters.Add("@StartDate", criteria.FromDate);
@@ -121,10 +121,11 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[rpt].[sp_rpt_ITEMWISESALE]";
+                helper.CommandText = "[dbo].[sp_rpt_ITEMWISESALE]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@StartDate", criteria.FromDate);
                 helper.Parameters.Add("@EndDate", criteria.ToDate);
+                helper.Parameters.Add("@CounterID", criteria.CounterId);
                 helper.Open();
                 helper.ExecuteReader(CommandBehavior.CloseConnection);
 
@@ -171,7 +172,7 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[mock].[sp_rpt_ITEMWISESALE]";
+                helper.CommandText = "[dbo].[sp_rpt_ITEMWISESALE]";
                 helper.CommandType = CommandType.StoredProcedure;
                 helper.Parameters.Add("@StartDate", criteria.FromDate);
                 helper.Parameters.Add("@EndDate", criteria.ToDate);
@@ -294,6 +295,41 @@ namespace POSWebRpt.DAL
             }
 
             return lstData;
+        }
+
+        public static DataSet GetAllItemGroup()
+        {
+            //string ProcName = "sp_Manage_ITEMGROUP";
+
+            List<ReportEntity> lstData = new List<ReportEntity>();
+
+            using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
+            {
+                helper.CommandText = "[dbo].[sp_Manage_ITEMGROUP]";
+                helper.CommandType = CommandType.StoredProcedure;
+                helper.Parameters.Add("@Mode", "T");
+                helper.Parameters.Add("@ItemRefID", 0);
+                helper.Parameters.Add("@pk_GroupID", 0);
+                helper.Parameters.Add("@UserID", 1);
+                helper.Parameters.Add("@Result", 0);
+
+                helper.Open();
+                return helper.ExecuteDataSet();
+    
+
+                //helper.ExecuteReader(CommandBehavior.CloseConnection);
+
+                //while (helper.DataReader.Read())
+                //{
+                //    ReportEntity report = new ReportEntity();
+                //    report.LoadCashierWiseSale(helper.DataReader);
+                //    lstData.Add(report);
+                //}
+
+                helper.Close();
+            }
+
+           
         }
     }
 }
