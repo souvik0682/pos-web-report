@@ -206,6 +206,7 @@
                             <TextRun>
                               <Value>Machine Name</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -239,6 +240,7 @@
                             <TextRun>
                               <Value>Login Time</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -272,6 +274,7 @@
                             <TextRun>
                               <Value>Logout Time</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -305,6 +308,7 @@
                             <TextRun>
                               <Value>Login Balance</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -338,6 +342,7 @@
                             <TextRun>
                               <Value>Logout Balance</Value>
                               <Style>
+                                <FontFamily>Calibri</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -418,7 +423,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!MachineName.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -450,7 +457,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!LoginTime.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -482,7 +491,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!LogoutTime.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -514,7 +525,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Fields!LoginBalance.Value, "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -546,7 +559,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Format(Fields!LogoutBalance.Value, "N2")</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -566,7 +581,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -618,7 +632,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>1.22917in</Height>
     <Style />
   </Body>
   <Width>7.5in</Width>
@@ -755,6 +769,7 @@ KOLKATA-700075,W.BENGAL</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0in</Top>
           <Height>0.25in</Height>
           <Width>3.4in</Width>
           <Style>
@@ -786,6 +801,7 @@ KOLKATA-700075,W.BENGAL</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0in</Top>
           <Left>4.5in</Left>
           <Height>0.25in</Height>
           <Width>3in</Width>
