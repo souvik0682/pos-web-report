@@ -27,13 +27,11 @@
                 <img alt="" src="<%=Page.ResolveClientUrl("~/Images/company_logo.jpg") %>" height="55" />
             </div>
             <div class="productname" style="margin-top: 10px;">
-                <center>
-                    <span style="color: Red; font-weight: bold; font-size: 16pt;">POS WEB APPLICATION</span></center>
+                <center><span style="color: Red; font-weight: bold; font-size: 16pt;">POS WEB APPLICATION</span></center>
             </div>
             <div class="search">
                 <div style="text-align: right;">
-                    <asp:Label ID="lblUserName" runat="server" Text="Welcome Guest"></asp:Label>&nbsp;&nbsp|&nbsp;&nbsp;<asp:LinkButton
-                        ID="lnkLogout" runat="server" OnClick="lnkLogout_Click" Text="Logout" ToolTip="Click to logout"></asp:LinkButton>
+                    <asp:Label ID="lblUserName" runat="server" Text="Welcome Guest"></asp:Label>&nbsp;&nbsp|&nbsp;&nbsp;<asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click" Text="Logout" ToolTip="Click to logout"></asp:LinkButton>
                 </div>
             </div>
         </div>
