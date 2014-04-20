@@ -1196,6 +1196,8 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <RepeatColumnHeaders>true</RepeatColumnHeaders>
+        <RepeatRowHeaders>true</RepeatRowHeaders>
         <DataSetName>dsReportData</DataSetName>
         <Height>1in</Height>
         <Width>8.62708in</Width>
@@ -1224,7 +1226,7 @@
   <Width>8.67292in</Width>
   <Page>
     <PageHeader>
-      <Height>1.11389in</Height>
+      <Height>1.1in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1282,7 +1284,7 @@ KOLKATA-700075,W.BENGAL</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.36389in</Top>
+          <Top>0.35in</Top>
           <Height>0.25in</Height>
           <Width>8.62708in</Width>
           <ZIndex>1</ZIndex>
@@ -1315,7 +1317,7 @@ KOLKATA-700075,W.BENGAL</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>0.65556in</Top>
+          <Top>0.6in</Top>
           <Left>5.32708in</Left>
           <Height>0.25in</Height>
           <Width>3.3in</Width>
@@ -1349,7 +1351,7 @@ KOLKATA-700075,W.BENGAL</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.64167in</Top>
+          <Top>0.6in</Top>
           <Height>0.25in</Height>
           <Width>3.7in</Width>
           <ZIndex>3</ZIndex>
@@ -1446,12 +1448,17 @@ KOLKATA-700075,W.BENGAL</Value>
         </Border>
       </Style>
     </PageFooter>
+    <PageHeight>8.5in</PageHeight>
+    <PageWidth>11in</PageWidth>
+    <InteractiveHeight>8.5in</InteractiveHeight>
+    <InteractiveWidth>11in</InteractiveWidth>
     <LeftMargin>0.2in</LeftMargin>
     <RightMargin>0.2in</RightMargin>
     <TopMargin>1in</TopMargin>
     <BottomMargin>1in</BottomMargin>
     <Style />
   </Page>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>d7e8204d-cba6-4a47-9cca-a4d90e9e7a33</rd:ReportID>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
 </Report>
