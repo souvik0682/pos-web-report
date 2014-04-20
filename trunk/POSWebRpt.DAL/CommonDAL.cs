@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using POSWebRpt.DAL.DBManager;
-using POSWebRpt.Entity;
-using POSWebRpt.Utilities;
 using POSWebRpt.Common;
+using POSWebRpt.Entity;
+using Utilities.DbManager;
+using POSWebRpt.DAL.DBManager;
 
 namespace POSWebRpt.DAL
 {

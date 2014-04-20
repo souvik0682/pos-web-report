@@ -63,6 +63,7 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ExternalLibraries\Utilities.dll" />
     <Content Include="Images\bg.jpg" />
     <Content Include="Images\chosen-sprite%402x.png" />
     <Content Include="Images\chosen-sprite.png" />

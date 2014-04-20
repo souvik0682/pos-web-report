@@ -43,5 +43,9 @@ namespace POSWebRpt.Common
         Decimal QuantityRejected { get; set; }
         Decimal QuantitySold { get; set; }
         Decimal ClosingBalance { get; set; }
+        Decimal VATPercentage { get; set; }
+        Decimal TotalQuantity { get; set; }
+        Decimal TotalVAT { get; set; }
+        Decimal TotalAmount { get; set; }
     }
 }

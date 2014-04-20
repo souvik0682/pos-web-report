@@ -6,16 +6,16 @@ using System.Text;
 using POSWebRpt.Common;
 using POSWebRpt.DAL.DBManager;
 using POSWebRpt.Entity;
-using POSWebRpt.Utilities;
+using Utilities.DbManager;
 
 namespace POSWebRpt.DAL
 {
     public class ReportDAL : DataServiceBase
     {
         public static List<ReportEntity> GetBillWiseSaleRefund(ReportCriteria criteria)
-        {
+        {            
             List<ReportEntity> lstData = new List<ReportEntity>();
-
+            
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
                 helper.CommandText = "[dbo].[sp_rpt_SALEREFUNDREGISTER]";
@@ -253,9 +253,10 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[rpt].[]";
+                helper.CommandText = "[dbo].[sp_rpt_ITEMWISEVAT]";
                 helper.CommandType = CommandType.StoredProcedure;
-                helper.Parameters.Add("@", 1);
+                helper.Parameters.Add("@StartDate", criteria.FromDate);
+                helper.Parameters.Add("@EndDate", criteria.ToDate);
                 helper.Open();
                 helper.ExecuteReader(CommandBehavior.CloseConnection);
 
@@ -278,9 +279,10 @@ namespace POSWebRpt.DAL
 
             using (SqlDataHelper helper = new SqlDataHelper(ConnectionString))
             {
-                helper.CommandText = "[rpt].[]";
+                helper.CommandText = "[dbo].[sp_rpt_ITEMWISEVAT]";
                 helper.CommandType = CommandType.StoredProcedure;
-                helper.Parameters.Add("@", 1);
+                helper.Parameters.Add("@StartDate", criteria.FromDate);
+                helper.Parameters.Add("@EndDate", criteria.ToDate);
                 helper.Open();
                 helper.ExecuteReader(CommandBehavior.CloseConnection);
 
@@ -326,7 +328,7 @@ namespace POSWebRpt.DAL
                 //    lstData.Add(report);
                 //}
 
-                helper.Close();
+                //helper.Close();
             }
 
            

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using POSWebRpt.Common;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace POSWebRpt.Entity
 {
@@ -47,6 +48,10 @@ namespace POSWebRpt.Entity
         public Decimal QuantityRejected { get; set; }
         public Decimal QuantitySold { get; set; }
         public Decimal ClosingBalance { get; set; }
+        public Decimal VATPercentage { get; set; }
+        public Decimal TotalQuantity { get; set; }
+        public Decimal TotalVAT { get; set; }
+        public Decimal TotalAmount { get; set; }
 
         #endregion
 
@@ -57,16 +62,16 @@ namespace POSWebRpt.Entity
 
         }
 
-        public ReportEntity(SqlDataReader reader)
+        public ReportEntity(DbDataReader reader)
         {
 
         }
 
         #endregion
 
-        #region Constructors
+        #region Public Methods
 
-        public void LoadBillWiseSaleRefund(SqlDataReader reader)
+        public void LoadBillWiseSaleRefund(DbDataReader reader)
         {
             this.BillType = Convert.ToString(reader["BillType"]);
             this.BillNo = Convert.ToInt32(reader["BillNo"]);
@@ -79,7 +84,7 @@ namespace POSWebRpt.Entity
             this.BillAmount = Convert.ToDecimal(reader["Total"]);
         }
 
-        public void LoadCashierLog(SqlDataReader reader)
+        public void LoadCashierLog(DbDataReader reader)
         {
             this.MachineName = Convert.ToString(reader[""]);
             this.CashierID = Convert.ToInt32(reader[""]);
@@ -90,7 +95,7 @@ namespace POSWebRpt.Entity
             this.LogoutBalance = Convert.ToDecimal(reader[""]);
         }
 
-        public void LoadCashierWiseSale(SqlDataReader reader)
+        public void LoadCashierWiseSale(DbDataReader reader)
         {
             this.BillDate = Convert.ToDateTime(reader["billdate"]);
             this.BillAmoutCash = Convert.ToDecimal(reader["BAMT"]);
@@ -102,7 +107,7 @@ namespace POSWebRpt.Entity
             this.NetAmountCreditCard = this.BillAmoutCreditCard - this.RefundAmoutCreditCard;
         }
 
-        public void LoadItemWiseSale(SqlDataReader reader)
+        public void LoadItemWiseSale(DbDataReader reader)
         {
             this.CounterId = Convert.ToInt32(reader["fk_MainItemGroupID"]);
             this.CounterName = Convert.ToString(reader["Descr"]);
@@ -116,7 +121,7 @@ namespace POSWebRpt.Entity
             this.BillAmount = Convert.ToDecimal(reader["TTotal"]);
         }
 
-        public void LoadCounterWiseSaleSummary(SqlDataReader reader)
+        public void LoadCounterWiseSaleSummary(DbDataReader reader)
         {
             this.CounterId = Convert.ToInt32(reader["fk_MainItemGroupID"]);
             this.CounterName = Convert.ToString(reader["Descr"]);
@@ -130,7 +135,7 @@ namespace POSWebRpt.Entity
             this.BillAmount = Convert.ToDecimal(reader["TTotal"]);
         }
 
-        public void LoadSalesRegister(SqlDataReader reader)
+        public void LoadSalesRegister(DbDataReader reader)
         {
             this.BillNo = Convert.ToInt32(reader["billno"]);
             this.BillDate = Convert.ToDateTime(reader["billdate"]);
@@ -143,7 +148,7 @@ namespace POSWebRpt.Entity
             this.RefundReason = Convert.ToString(reader["Reason"]);
         }
 
-        public void LoadStockLedger(SqlDataReader reader)
+        public void LoadStockLedger(DbDataReader reader)
         {
             this.CounterName = Convert.ToString(reader["Descr"]);
             this.ItemGroupName = Convert.ToString(reader["descr1"]);
@@ -157,14 +162,30 @@ namespace POSWebRpt.Entity
             this.ClosingBalance = Convert.ToInt32(reader["TQTY"]);
         }
 
-        public void LoadItemWiseVat(SqlDataReader reader)
+        public void LoadItemWiseVat(DbDataReader reader)
         {
-
+            this.ItemId = Convert.ToInt32(reader["fk_itemID"]);
+            this.ItemName = Convert.ToString(reader["itemDescr"]);
+            this.BillDate = Convert.ToDateTime(reader["BillDate"]);
+            this.VATPercentage = Convert.ToDecimal(reader["VATPer"]);
+            this.CounterId = Convert.ToInt32(reader["fk_MainItemGroupID"]);
+            this.CounterName = Convert.ToString(reader["Descr"]);
+            this.TotalQuantity = Convert.ToDecimal(reader["Tqty"]);
+            this.TotalVAT = Convert.ToDecimal(reader["TVAT"]);
+            this.TotalAmount = Convert.ToDecimal(reader["TTotal"]);
         }
 
-        public void LoadRestaurantWiseVat(SqlDataReader reader)
+        public void LoadRestaurantWiseVat(DbDataReader reader)
         {
-
+            this.ItemId = Convert.ToInt32(reader["fk_itemID"]);
+            this.ItemName = Convert.ToString(reader["itemDescr"]);
+            this.BillDate = Convert.ToDateTime(reader["BillDate"]);
+            this.VATPercentage = Convert.ToDecimal(reader["VATPer"]);
+            this.CounterId = Convert.ToInt32(reader["fk_MainItemGroupID"]);
+            this.CounterName = Convert.ToString(reader["Descr"]);
+            this.TotalQuantity = Convert.ToDecimal(reader["Tqty"]);
+            this.TotalVAT = Convert.ToDecimal(reader["TVAT"]);
+            this.TotalAmount = Convert.ToDecimal(reader["TTotal"]);
         }
 
         #endregion

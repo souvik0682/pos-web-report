@@ -5,6 +5,7 @@ using System.Text;
 using POSWebRpt.Common;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace POSWebRpt.Entity
 {
@@ -119,7 +120,7 @@ namespace POSWebRpt.Entity
             this.UserRole = new RoleEntity();
         }
 
-        public UserEntity(SqlDataReader reader)
+        public UserEntity(DbDataReader reader)
         {
             this.Id = Convert.ToInt32(reader["UserId"]);
             this.Name = Convert.ToString(reader["UserName"]);
@@ -139,7 +140,7 @@ namespace POSWebRpt.Entity
 
         #region Private Methods
 
-        private bool HasColumn(SqlDataReader reader, string columnName)
+        private bool HasColumn(DbDataReader reader, string columnName)
         {
             try
             {
