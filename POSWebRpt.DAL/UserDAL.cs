@@ -4,14 +4,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using POSWebRpt.Common;
-using POSWebRpt.DAL.DBManager;
 using POSWebRpt.Entity;
-using POSWebRpt.Utilities;
-using POSWebRpt.Utilities.ResourceManager;
+using Utilities.DbManager;
 
 namespace POSWebRpt.DAL
 {
-    public class UserDAL : DataServiceBase
+    public class UserDAL : POSWebRpt.DAL.DBManager.DataServiceBase
     {
         #region User
 

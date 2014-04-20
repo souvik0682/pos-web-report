@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using POSWebRpt.Common;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace POSWebRpt.Entity
 {
@@ -49,7 +50,7 @@ namespace POSWebRpt.Entity
 
         }
 
-        public RoleEntity(SqlDataReader reader)
+        public RoleEntity(DbDataReader reader)
         {
             this.Id = Convert.ToInt32(reader["RoleId"]);
             this.Name = Convert.ToString(reader["RoleName"]);

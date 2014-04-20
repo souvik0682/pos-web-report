@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using POSWebRpt.Common;
 using POSWebRpt.DAL;
-using POSWebRpt.DAL.DBManager;
 using POSWebRpt.Entity;
 using POSWebRpt.Utilities;
 using POSWebRpt.Utilities.ResourceManager;

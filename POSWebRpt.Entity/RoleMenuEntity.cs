@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using POSWebRpt.Common;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace POSWebRpt.Entity
 {
@@ -101,7 +102,7 @@ namespace POSWebRpt.Entity
 
         }
 
-        public RoleMenuEntity(SqlDataReader reader)
+        public RoleMenuEntity(DbDataReader reader)
         {
             this.MenuAccessID = Convert.ToInt32(reader["MenuAccessID"]);
             this.Id = Convert.ToInt32(reader["RoleID"]);

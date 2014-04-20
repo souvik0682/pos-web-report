@@ -46,12 +46,15 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Utilities">
+      <HintPath>..\POSWebRpt.Web\ExternalLibraries\Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonDAL.cs" />
-    <Compile Include="DBManager\DataServiceBase.cs" />
-    <Compile Include="DBManager\ParameterCollection.cs" />
-    <Compile Include="DBManager\SqlDataHelper.cs" />
+    <Compile Include="DBManager\DataServiceBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportDAL.cs" />
     <Compile Include="UserDAL.cs" />
@@ -64,10 +67,6 @@
     <ProjectReference Include="..\POSWebRpt.Entity\POSWebRpt.Entity.csproj">
       <Project>{75042410-C20D-40D6-BA4E-1725261D8A99}</Project>
       <Name>POSWebRpt.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\POSWebRpt.Utilities\POSWebRpt.Utilities.csproj">
-      <Project>{28E5E572-5113-47B8-AC41-D9107BC71767}</Project>
-      <Name>POSWebRpt.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
